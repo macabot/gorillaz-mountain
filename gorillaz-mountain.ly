@@ -32,28 +32,37 @@ sharedTheme = \relative c' {
 coreMelody  = { \sharedTheme \relative c' { b'4 gis8 fis8 e4 gis8 b8 } }
 outroMelody = { \sharedTheme \relative c' { b'4 gis8 fis8 e4 r4 } }
 
-% TRANSPOSITIONS
-%celloCore  = \transpose c c, { \coreMelody }
-%celloOutro = \transpose c c, { \outroMelody }
-celloCore = { \coreMelody }
-celloOutro = { \outroMelody }
-
-
-% STITCH THE INSTRUMENTS TOGETHER
-celloPart = \relative c' {
-  %\clef bass
-  \clef treble
-
-  \partial 4 gis'8 b8
-  \repeat unfold 4 { \celloCore } 
-  \celloOutro
-  R1 * 8
-  \bar "|."
+flutePart = {
+  \partial 4 r4
+  R1*48
 }
-
+recorderPart = {
+  \partial 4 r4
+  R1*48
+}
+percussionPart = \drummode {
+  \partial 4 r4
+  R1*48
+}
+pianoUpper = {
+  \partial 4 r4
+  R1*48
+}
+pianoLower = {
+  \partial 4 r4
+  R1*48
+}
+harpUpper = {
+  \partial 4 r4
+  R1*48
+}
+harpLower = {
+  \partial 4 r4
+  R1*48
+}
 guitarPart = \relative c' {
   \clef treble
-  
+
   \partial 4 r4
   R1 * 15
   r4 r4 r4 gis'8 b8
@@ -61,18 +70,73 @@ guitarPart = \relative c' {
   \outroMelody
   \bar "|."
 }
+violinPart = {
+  \partial 4 r4
+  R1*48
+}
+%celloCore  = \transpose c c, { \coreMelody }
+%celloOutro = \transpose c c, { \outroMelody }
+celloCore = { \coreMelody }
+celloOutro = { \outroMelody }
+celloPart = \relative c' {
+  %\clef bass
+  \clef treble
+
+  \partial 4 gis'8 b8
+  \repeat unfold 4 { \celloCore }
+  \celloOutro
+  R1 * 8
+  \bar "|."
+}
 
 
 % --- SCORE OUTPUT ---
 \score {
   <<
+    % --- WOODWINDS ---
     \new Staff \with {
-      midiInstrument = #"cello"
-      instrumentName = #"Cello"
-      shortInstrumentName = #"Vc."
+      midiInstrument = #"flute"
+      instrumentName = #"Flute"
+      shortInstrumentName = #"Fl."
     } {
-      \context Voice = "cello" << \global \celloPart >>
+      \context Voice = "flute" { << \global \flutePart >> }
     }
+    \new Staff \with {
+      midiInstrument = #"recorder"
+      instrumentName = #"Recorder"
+      shortInstrumentName = #"Rec."
+    } {
+      \context Voice = "recorder" { << \global \recorderPart >> }
+    }
+
+    % --- PERCUSSION ---
+    \new DrumStaff \with {
+      midiInstrument = #"melodic tom" % or "synth drum"
+      instrumentName = #"Percussion"
+      shortInstrumentName = #"Perc."
+    } {
+      \context DrumVoice = "percussion" { << \global \percussionPart >> }
+    }
+
+    % --- KEYBOARD / PLUCKED ---
+    \new PianoStaff \with {
+      midiInstrument = #"acoustic grand"
+      instrumentName = #"Piano"
+      shortInstrumentName = #"Pno."
+    } <<
+      \new Staff { \clef treble << \global \pianoUpper >> }
+      \new Staff { \clef bass << \global \pianoLower >> }
+    >>
+
+    \new PianoStaff \with {
+      midiInstrument = #"orchestral harp"
+      instrumentName = #"Harp"
+      shortInstrumentName = #"Hp."
+    } <<
+      \new Staff { \clef treble << \global \harpUpper >> }
+      \new Staff { \clef bass << \global \harpLower >> }
+    >>
+
     \new Staff \with {
       midiInstrument = #"acoustic guitar (nylon)"
       instrumentName = #"Guitar"
@@ -80,7 +144,28 @@ guitarPart = \relative c' {
     } {
       \context Voice = "guitar" << \global \guitarPart >>
     }
+
+    % --- STRINGS ---
+    \new Staff \with {
+      midiInstrument = #"violin"
+      instrumentName = #"Violin"
+      shortInstrumentName = #"Vln."
+    } {
+      \context Voice = "violin" { << \global \violinPart >> }
+    }
+
+    \new Staff \with {
+      midiInstrument = #"cello"
+      instrumentName = #"Cello"
+      shortInstrumentName = #"Vc."
+    } {
+      \context Voice = "cello" << \global \celloPart >>
+    }
+
   >>
-  \layout { }
-  \midi { } 
+  \layout {
+    indent = 1.5 \cm
+    short-indent = 0.5 \cm
+  }
+  \midi { }
 }
