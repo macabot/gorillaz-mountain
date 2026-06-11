@@ -11,32 +11,76 @@
   tagline = "Cover for the MidwoudMuziekMiddag"
 }
 
-melody = \relative c' {
-  \clef treble
+global = {
   \key e \major
   \time 4/4
   \tempo 4 = 90
-
-  r4 r4 r4 gis'8 b8
-  e2. gis,8 b8
-  dis2 dis8 cis8 b8 a8
-  cis2 cis8 b8 a8 gis8
-  b4 gis8 fis8 e4 e8 gis8
-  b4 e,8 gis8 b4 e,8 gis8
-  b4 a8 gis8 fis4 e8 fis8
-  a4 e8 fis8 a4 e8 fis8
-  b4 gis8 fis8 e4 r4
 }
 
+% THE CORE 7-BAR THEME (Shared by both the loop and the ending)
+sharedTheme = \relative c' {
+  e'2. gis,8 b8 |
+  dis2 dis8 cis8 b8 a8 |
+  cis2 cis8 b8 a8 gis8 |
+  b4 gis8 fis8 e4 e8 gis8 |
+  b4 e,8 gis8 b4 e,8 gis8 |
+  b4 a8 gis8 fis4 e8 fis8 |
+  a4 e8 fis8 a4 e8 fis8 |
+}
+
+% THE CHOSEN ENDINGS FOR THE 8TH BAR
+coreMelody  = { \sharedTheme \relative c' { b'4 gis8 fis8 e4 gis8 b8 } }
+outroMelody = { \sharedTheme \relative c' { b'4 gis8 fis8 e4 r4 } }
+
+% TRANSPOSITIONS
+%celloCore  = \transpose c c, { \coreMelody }
+%celloOutro = \transpose c c, { \outroMelody }
+celloCore = { \coreMelody }
+celloOutro = { \outroMelody }
+
+
+% STITCH THE INSTRUMENTS TOGETHER
+celloPart = \relative c' {
+  %\clef bass
+  \clef treble
+
+  \partial 4 gis'8 b8
+  \repeat unfold 4 { \celloCore } 
+  \celloOutro
+  R1 * 8
+  \bar "|."
+}
+
+guitarPart = \relative c' {
+  \clef treble
+  
+  \partial 4 r4
+  R1 * 15
+  r4 r4 r4 gis'8 b8
+  \repeat unfold 3 { \coreMelody }
+  \outroMelody
+  \bar "|."
+}
+
+
+% --- SCORE OUTPUT ---
 \score {
   <<
-    \new Staff {
-      \new Voice = "myNotes" {
-        \set Staff.midiInstrument = #"cello"
-        \melody
-      }
+    \new Staff \with {
+      midiInstrument = #"cello"
+      instrumentName = #"Cello"
+      shortInstrumentName = #"Vc."
+    } {
+      \context Voice = "cello" << \global \celloPart >>
+    }
+    \new Staff \with {
+      midiInstrument = #"acoustic guitar (nylon)"
+      instrumentName = #"Guitar"
+      shortInstrumentName = #"Gt."
+    } {
+      \context Voice = "guitar" << \global \guitarPart >>
     }
   >>
   \layout { }
-  \midi { }
+  \midi { } 
 }
