@@ -11,7 +11,13 @@
   tagline = "Cover for the MidwoudMuziekMiddag"
 }
 
-% 1. THE CORE 7-BAR THEME (Shared by both the loop and the ending)
+global = {
+  \key e \major
+  \time 4/4
+  \tempo 4 = 90
+}
+
+% THE CORE 7-BAR THEME (Shared by both the loop and the ending)
 sharedTheme = \relative c' {
   e'2. gis,8 b8 |
   dis2 dis8 cis8 b8 a8 |
@@ -22,56 +28,57 @@ sharedTheme = \relative c' {
   a4 e8 fis8 a4 e8 fis8 |
 }
 
-% 2. THE CHOSEN ENDINGS FOR THE 8TH BAR
-coreMelody  = { \sharedTheme \relative c' { b4 gis8 fis8 e4 gis8 b8 } } % Loops perfectly
-outroMelody = { \sharedTheme \relative c' { b4 gis8 fis8 e4 r4 \bar "|." } } % Ends neatly
+% THE CHOSEN ENDINGS FOR THE 8TH BAR
+coreMelody  = { \sharedTheme \relative c' { b'4 gis8 fis8 e4 gis8 b8 } }
+outroMelody = { \sharedTheme \relative c' { b'4 gis8 fis8 e4 r4 } }
 
-% 3. TRANSPOSITIONS (Defined safely BEFORE the instrument parts use them)
+% TRANSPOSITIONS
 %celloCore  = \transpose c c, { \coreMelody }
 %celloOutro = \transpose c c, { \outroMelody }
 celloCore = { \coreMelody }
 celloOutro = { \outroMelody }
 
 
-% 4. STITCH THE INSTRUMENTS TOGETHER
-celloPart = {
+% STITCH THE INSTRUMENTS TOGETHER
+celloPart = \relative c' {
   %\clef bass
   \clef treble
-  \key e \major
-  \time 4/4
-  \tempo 4 = 90
-  
-  % Intro pickup notes just for the very first entrance
-  \partial 4 gis8 b8 
-  
-  % Cello plays the core loop 4 times, then the outro loop 1 time (5 total)
+
+  \partial 4 gis'8 b8
   \repeat unfold 4 { \celloCore } 
   \celloOutro
+  R1 * 8
+  \bar "|."
 }
 
-guitarPart = {
+guitarPart = \relative c' {
   \clef treble
-  \key e \major
-  \time 4/4
   
-  % Guitar waits while Cello plays 2 loops (16 full bars + the initial 1-beat pickup)
   \partial 4 r4
-  R1 * 16 
-  
-  % Guitar enters and plays the core loop 3 times, then the outro loop 1 time (4 total)
+  R1 * 15
+  r4 r4 r4 gis'8 b8
   \repeat unfold 3 { \coreMelody }
   \outroMelody
+  \bar "|."
 }
 
 
 % --- SCORE OUTPUT ---
 \score {
   <<
-    \new Staff \with { midiInstrument = #"cello" } {
-      \context Voice = "cello" { \celloPart }
+    \new Staff \with {
+      midiInstrument = #"cello"
+      instrumentName = #"Cello"
+      shortInstrumentName = #"Vc."
+    } {
+      \context Voice = "cello" << \global \celloPart >>
     }
-    \new Staff \with { midiInstrument = #"acoustic guitar (nylon)" } {
-      \context Voice = "guitar" { \guitarPart }
+    \new Staff \with {
+      midiInstrument = #"acoustic guitar (nylon)"
+      instrumentName = #"Guitar"
+      shortInstrumentName = #"Gt."
+    } {
+      \context Voice = "guitar" << \global \guitarPart >>
     }
   >>
   \layout { }
