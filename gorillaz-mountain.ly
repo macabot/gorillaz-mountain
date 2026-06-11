@@ -74,15 +74,12 @@ violinPart = {
   \partial 4 r4
   R1*48
 }
-%celloCore  = \transpose c c, { \coreMelody }
-%celloOutro = \transpose c c, { \outroMelody }
-celloCore = { \coreMelody }
-celloOutro = { \outroMelody }
+celloCore  = \transpose c c,, { \coreMelody }
+celloOutro = \transpose c c,, { \outroMelody }
 celloPart = \relative c' {
-  %\clef bass
-  \clef treble
+  \clef bass
 
-  \partial 4 gis'8 b8
+  \partial 4 gis,8 b8
   \repeat unfold 4 { \celloCore }
   \celloOutro
   R1 * 8
