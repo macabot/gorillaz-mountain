@@ -32,33 +32,46 @@ sharedTheme = \relative c' {
 coreMelody  = { \sharedTheme \relative c' { b'4 gis8 fis8 e4 gis8 b8 } }
 outroMelody = { \sharedTheme \relative c' { b'4 gis8 fis8 e4 r4 } }
 
-flutePart = {
-  \partial 4 r4
-  R1*48
+flutePart = \relative c' {
+  \partial 4 gis'8 b8
+  \repeat unfold 1 { \coreMelody }
+  \outroMelody
+  R1*32
+  \bar "|."
 }
-recorderPart = {
+recorderPart = \relative c' {
   \partial 4 r4
-  R1*48
+  R1*7
+  r4 r4 r4 gis'8 b8
+  \repeat unfold 1 { \coreMelody }
+  \outroMelody
+  R1*24
+  \bar "|."
 }
 percussionPart = \drummode {
   \partial 4 r4
   R1*48
+  \bar "|."
 }
-pianoUpper = {
+pianoUpper = \relative c' {
   \partial 4 r4
   R1*48
+  \bar "|."
 }
-pianoLower = {
+pianoLower = \relative c' {
   \partial 4 r4
   R1*48
+  \bar "|."
 }
-harpUpper = {
+harpUpper = \relative c' {
   \partial 4 r4
   R1*48
+  \bar "|."
 }
-harpLower = {
+harpLower = \relative c' {
   \partial 4 r4
   R1*48
+  \bar "|."
 }
 guitarPart = \relative c' {
   \clef treble
@@ -70,19 +83,22 @@ guitarPart = \relative c' {
   \outroMelody
   \bar "|."
 }
-violinPart = {
+violinPart = \relative c' {
   \partial 4 r4
   R1*48
+  \bar "|."
 }
 celloCore  = \transpose c c,, { \coreMelody }
 celloOutro = \transpose c c,, { \outroMelody }
 celloPart = \relative c' {
   \clef bass
 
-  \partial 4 gis,8 b8
-  \repeat unfold 4 { \celloCore }
-  \celloOutro
-  R1 * 8
+  \partial 4 r4
+  R1*48
+  %\partial 4 gis,8 b8
+  %\repeat unfold 4 { \celloCore }
+  %\celloOutro
+  %R1 * 8
   \bar "|."
 }
 
