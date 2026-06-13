@@ -1,3 +1,27 @@
+%{
+intro
+drums until stops
+
+flute
+flute shaker halfway guitar
+flute shaker guitar base (sounds full)
+flute'' base shingle guitar
+flute aahs no-drums, shingle, shaker
+flute
+
+
+intro
+drums until stops
+flute
+flute guitar sitar halfway
+flute base shaker shingle guitar sitar
+flute' base shaker shingle guitar sitar
+flute aahs no-drums, shaker
+flute-high, base (first half), aahs,
+flute drums, sitar, aahs
+outro
+%}
+
 \version "2.24.3"
 
 \paper {
