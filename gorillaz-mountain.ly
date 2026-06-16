@@ -23,6 +23,9 @@ outro
 %}
 
 \version "2.24.3"
+\include "global.ly"
+\include "flute-melody.ly"
+\include "recorder-melody.ly"
 
 \paper {
   #(set-paper-size "a4")
@@ -33,12 +36,6 @@ outro
   composer = "Gorillaz ft. Dennis Hopper, Ajay Prasanna, Anoushka Shankar, Amaan & Ayaan Ali Bangash"
   arranger = "Arranged by Michael Cabot"
   tagline = "Cover for the MidwoudMuziekMiddag"
-}
-
-global = {
-  \key e \major
-  \time 4/4
-  \tempo 4 = 90
 }
 
 % THE CORE 7-BAR THEME (Shared by both the loop and the ending)
@@ -57,18 +54,18 @@ coreMelody  = { \sharedTheme \relative c' { b'4 gis8 fis8 e4 gis8 b8 } }
 outroMelody = { \sharedTheme \relative c' { b'4 gis8 fis8 e4 r4 } }
 
 flutePart = \relative c' {
-  \partial 4 gis'8 b8
-  \repeat unfold 1 { \coreMelody }
-  \outroMelody
+  \flutePickup
+  \repeat unfold 1 { \fluteRepeatMelody }
+  \fluteOutroMelody
   R1*32
   \bar "|."
 }
 recorderPart = \relative c' {
   \partial 4 r4
   R1*7
-  r4 r4 r4 gis'8 b8
-  \repeat unfold 1 { \coreMelody }
-  \outroMelody
+  \recorderLeadIn
+  \repeat unfold 1 { \recorderRepeatMelody }
+  \recorderOutroMelody
   R1*24
   \bar "|."
 }
