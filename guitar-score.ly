@@ -5,7 +5,7 @@
 guitarPart = \relative c' {
   \clef "treble_8"
   \guitarPickup
-  \guitarChords
+  \guitarOutroChords
   \bar "|."
 }
 
