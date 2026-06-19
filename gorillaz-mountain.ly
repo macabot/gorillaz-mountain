@@ -27,6 +27,7 @@ outro
 \include "flute-melody.ly"
 \include "recorder-melody.ly"
 \include "guitar-melody.ly"
+\include "cello-melody.ly"
 
 \paper {
   #(set-paper-size "a4")
@@ -110,17 +111,11 @@ violinPart = \relative c' {
   R1*48
   \bar "|."
 }
-celloCore  = \transpose c c,, { \coreMelody }
-celloOutro = \transpose c c,, { \outroMelody }
 celloPart = \relative c' {
   \clef bass
-
   \partial 4 r4
-  R1*48
-  %\partial 4 gis,8 b8
-  %\repeat unfold 4 { \celloCore }
-  %\celloOutro
-  %R1 * 8
+  R1 * 8
+  \celloOutroMelody
   \bar "|."
 }
 
