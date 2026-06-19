@@ -26,6 +26,7 @@ outro
 \include "global.ly"
 \include "flute-melody.ly"
 \include "recorder-melody.ly"
+\include "guitar-melody.ly"
 
 \paper {
   #(set-paper-size "a4")
@@ -95,13 +96,13 @@ harpLower = \relative c' {
   \bar "|."
 }
 guitarPart = \relative c' {
-  \clef treble
+  \clef "treble_8"
 
   \partial 4 r4
-  R1 * 15
-  r4 r4 r4 gis'8 b8
-  \repeat unfold 3 { \coreMelody }
-  \outroMelody
+  R1 * 8
+  \guitarOutroChords
+  %\repeat unfold 3 { \guitarChords }
+  %\outroMelody
   \bar "|."
 }
 violinPart = \relative c' {
