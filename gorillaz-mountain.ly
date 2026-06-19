@@ -100,7 +100,7 @@ guitarPart = \relative c' {
 
   \partial 4 r4
   R1 * 8
-  \guitarChords
+  \guitarOutroChords
   %\repeat unfold 3 { \guitarChords }
   %\outroMelody
   \bar "|."
