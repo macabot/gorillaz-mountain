@@ -6,7 +6,7 @@ guitarLeadIn = \relative c' {
   r1
 }
 
-guitarSharedChords = \chordmode {
+guitarSharedChords = \transpose c c, \chordmode {
   % Bar 1: E Major
   e8 e8 e8 e8 e8 e8 e8 e8 |
 
@@ -31,7 +31,7 @@ guitarSharedChords = \chordmode {
 
 guitarRepeatChords = {
   \guitarSharedChords
-  \chordmode {
+  \transpose c c, \chordmode {
     % Bar 8: A Minor to E Major (Resolves the loop)
     a8:m a8:m a8:m a8:m e8 e8 e8 e8 |
   }
@@ -39,7 +39,7 @@ guitarRepeatChords = {
 
 guitarOutroChords = {
   \guitarSharedChords
-  \chordmode {
+  \transpose c c, \chordmode {
     % Bar 8: A Minor to E Major
     a8:m a8:m a8:m a8:m e8 e8 r4 |
   }
