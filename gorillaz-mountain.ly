@@ -96,14 +96,18 @@ harpLower = \relative c' {
   R1*48
   \bar "|."
 }
-guitarPart = \relative c' {
-  \clef "treble_8"
-
+guitarShared = {
   \partial 4 r4
   R1 * 8
   \guitarOutroChords
-  %\repeat unfold 3 { \guitarChords }
-  %\outroMelody
+}
+guitarChordNames = {
+  \set chordChanges = ##t
+  \guitarShared
+}
+guitarPart = {
+  \clef "treble_8"
+  \guitarShared
   \bar "|."
 }
 violinPart = \relative c' {
@@ -167,13 +171,18 @@ celloPart = \relative c' {
       \new Staff { \clef bass << \global \harpLower >> }
     >>
 
-    \new Staff \with {
-      midiInstrument = #"acoustic guitar (nylon)"
-      instrumentName = #"Guitar"
-      shortInstrumentName = #"Gt."
-    } {
-      \context Voice = "guitar" << \global \guitarPart >>
-    }
+    <<
+      \new ChordNames {
+        \guitarChordNames
+      }
+      \new Staff \with {
+        midiInstrument = #"acoustic guitar (nylon)"
+        instrumentName = #"Guitar"
+        shortInstrumentName = #"Gt."
+      } {
+        \context Voice = "guitar" << \global \guitarPart >>
+      }
+    >>
 
     % --- STRINGS ---
     \new Staff \with {
