@@ -28,6 +28,7 @@ outro
 \include "recorder-melody.ly"
 \include "guitar-melody.ly"
 \include "cello-melody.ly"
+\include "harp-melody.ly"
 
 \paper {
   #(set-paper-size "a4")
@@ -73,7 +74,8 @@ pianoLower = \relative c' {
 }
 harpUpper = \relative c' {
   \partial 4 r4
-  R1*48
+  R1*8
+  \harpUpperOutroMelody
   \bar "|."
 }
 harpLower = \relative c' {
@@ -148,7 +150,9 @@ celloPart = \relative c' {
     >>
 
     \new PianoStaff \with {
-      midiInstrument = #"orchestral harp"
+      % TODO: Add to sheet music that tin foil must be added.
+      % Harp with tin foil sounds like a sitar.
+      midiInstrument = #"sitar"
       instrumentName = #"Harp"
       shortInstrumentName = #"Hp."
     } <<
