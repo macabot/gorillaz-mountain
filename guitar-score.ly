@@ -4,7 +4,6 @@
 
 guitarShared = {
   \partial 4 r4
-  R1 * 8
   \guitarOutroChords
 }
 guitarChordNames = {

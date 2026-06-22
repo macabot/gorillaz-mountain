@@ -7,20 +7,21 @@ celloLeadIn = \relative c, {
 }
 
 celloSharedMelody = \relative c, {
-  e'1 |
-  dis1 |
+  d'1 |
   cis1 |
-  b2 e2 |
-  b2 b2 |
-  b2 fis2 |
+  b1 |
+  a2 d2 |
   a2 a2 |
+  a2 e2 |
+  g2 g2 |
 }
 
 celloRepeatMelody  = {
   \celloSharedMelody
-  \relative c, { b'2 e2 }
+  \relative c, { a'2 d2 }
 }
+
 celloOutroMelody = {
   \celloSharedMelody
-  \relative c, { b'2 e4 r4 }
+  \relative c, { a'2 d4 r4 }
 }
