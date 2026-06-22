@@ -40,21 +40,6 @@ outro
   tagline = "Cover for the MidwoudMuziekMiddag"
 }
 
-% THE CORE 7-BAR THEME (Shared by both the loop and the ending)
-sharedTheme = \relative c' {
-  e'2. gis,8 b8 |
-  dis2 dis8 cis8 b8 a8 |
-  cis2 cis8 b8 a8 gis8 |
-  b4 gis8 fis8 e4 e8 gis8 |
-  b4 e,8 gis8 b4 e,8 gis8 |
-  b4 a8 gis8 fis4 e8 fis8 |
-  a4 e8 fis8 a4 e8 fis8 |
-}
-
-% THE CHOSEN ENDINGS FOR THE 8TH BAR
-coreMelody  = { \sharedTheme \relative c' { b'4 gis8 fis8 e4 gis8 b8 } }
-outroMelody = { \sharedTheme \relative c' { b'4 gis8 fis8 e4 r4 } }
-
 flutePart = \relative c' {
   \flutePickup
   \repeat unfold 1 { \fluteRepeatMelody }
