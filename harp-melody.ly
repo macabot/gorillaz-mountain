@@ -20,7 +20,7 @@ harpUpperSharedMelody = \relative c' {
   g4 d8 e8 g4 d8 e8 |
 }
 
-harpUpperRepeatMelody  = {
+harpUpperRepeatMelody = {
   \harpUpperSharedMelody
   \relative c' { a'8 \acciaccatura g8 a8 fis8 e8 d4 fis8 a8 }
 }
@@ -28,4 +28,32 @@ harpUpperRepeatMelody  = {
 harpUpperOutroMelody = {
   \harpUpperSharedMelody
   \relative c' { a'8 \acciaccatura g8 a8 fis8 e8 d4 r4 }
+}
+
+harpLowerPickup = \relative c' {
+  \partial 4 r4
+}
+
+harpLowerLeadIn = \relative c' {
+  r1
+}
+
+harpLowerSharedMelody = \relative c' {
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+}
+
+harpLowerRepeatMelody = {
+  \harpLowerSharedMelody
+  \relative c' { r1 }
+}
+
+harpLowerOutroMelody = {
+  \harpLowerSharedMelody
+  \relative c' { r1 }
 }

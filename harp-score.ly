@@ -2,19 +2,26 @@
 \include "global.ly"
 \include "harp-melody.ly"
 
-harpUpper = \relative c' {
+harpUpper = {
   \harpUpperPickup
   \harpUpperOutroMelody
   \bar "|."
 }
 
+harpLower = {
+  \harpLowerPickup
+  \harpLowerOutroMelody
+  \bar "|."
+}
+
 \score {
-  \new Staff \with {
+  \new PianoStaff \with {
     % Harp with tin foil sounds like a sitar.
     midiInstrument = #"sitar"
-  } {
-    \context Voice = "harp" { << \global \harpUpper >> }
-  }
+  } <<
+    \new Staff { \clef treble << \global \harpUpper >> }
+    \new Staff { \clef bass << \global \harpLower >> }
+  >>
   \layout {
     \context { \Score \remove "Bar_number_engraver" }
   }
