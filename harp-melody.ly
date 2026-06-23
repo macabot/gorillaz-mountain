@@ -1,3 +1,7 @@
+harpUpperEmptyPickup = {
+  \partial 4 r4^\markup \italic "Weave tin foil between strings"
+}
+
 harpUpperPickup = \relative c' {
   \partial 4 fis8 a8
 }

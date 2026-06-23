@@ -73,8 +73,9 @@ pianoLower = \relative c' {
   \bar "|."
 }
 harpUpper = \relative c' {
-  \partial 4 r4
-  R1*8
+  \harpUpperEmptyPickup
+  R1*7
+  \harpUpperLeadIn
   \harpUpperOutroMelody
   \bar "|."
 }
