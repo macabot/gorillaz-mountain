@@ -81,7 +81,9 @@ harpUpper = \relative c' {
 }
 harpLower = \relative c' {
   \partial 4 r4
-  R1*48
+  R1*7
+  \harpLowerLeadIn
+  \harpLowerOutroMelody
   \bar "|."
 }
 guitarShared = {

@@ -39,10 +39,10 @@ harpLowerLeadIn = \relative c' {
 }
 
 harpLowerSharedMelody = \relative c' {
-  r1 |
-  r1 |
-  r1 |
-  r1 |
+  <fis, a d>4.\arpeggio fis,8~ fis2 |
+  <fis' a cis>4.\arpeggio cis,8~ cis2 |
+  <b' d g>4.\arpeggio d,8~ d2 |
+  <cis' e a>2\arpeggio r8 fis,8 a8 d8 |
   r1 |
   r1 |
   r1 |
