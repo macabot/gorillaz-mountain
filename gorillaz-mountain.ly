@@ -151,7 +151,6 @@ celloPart = \relative c' {
     >>
 
     \new PianoStaff \with {
-      % TODO: Add to sheet music that tin foil must be added.
       % Harp with tin foil sounds like a sitar.
       midiInstrument = #"sitar"
       instrumentName = #"Harp"
