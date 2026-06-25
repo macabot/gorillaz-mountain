@@ -2,6 +2,7 @@
 \include "global.ly"
 \include "harp-melody.ly"
 
+% TODO: Similarly start the harpUpper halfway in gorillaz-mountain.ly
 harpUpper = {
   \harpUpperLeadIn
   \harpUpperSecondHalfRepeatMelody
