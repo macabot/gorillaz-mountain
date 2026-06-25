@@ -74,7 +74,11 @@ pianoLower = \relative c' {
 }
 harpUpper = \relative c' {
   \harpUpperEmptyPickup
-  R1*7
+  R1*11
+  \harpUpperLeadIn
+  \harpUpperSecondHalfRepeatMelody
+  \harpUpperOutroMelody
+  \bar "|."
   \harpUpperLeadIn
   \harpUpperOutroMelody
   \bar "|."
@@ -134,6 +138,7 @@ celloPart = \relative c' {
     }
 
     % --- PERCUSSION ---
+    %{
     \new DrumStaff \with {
       midiInstrument = #"melodic tom" % or "synth drum"
       instrumentName = #"Percussion"
@@ -141,8 +146,10 @@ celloPart = \relative c' {
     } {
       \context DrumVoice = "percussion" { << \global \percussionPart >> }
     }
+    %}
 
     % --- KEYBOARD / PLUCKED ---
+    %{
     \new PianoStaff \with {
       midiInstrument = #"acoustic grand"
       instrumentName = #"Piano"
@@ -151,6 +158,7 @@ celloPart = \relative c' {
       \new Staff { \clef treble << \global \pianoUpper >> }
       \new Staff { \clef bass << \global \pianoLower >> }
     >>
+    %}
 
     \new PianoStaff \with {
       % Harp with tin foil sounds like a sitar.
@@ -159,7 +167,7 @@ celloPart = \relative c' {
       shortInstrumentName = #"Hp."
     } <<
       \new Staff { \clef treble << \global \harpUpper >> }
-      \new Staff { \clef bass << \global \harpLower >> }
+      %\new Staff { \clef bass << \global \harpLower >> }
     >>
 
     <<
@@ -176,6 +184,7 @@ celloPart = \relative c' {
     >>
 
     % --- STRINGS ---
+    %{
     \new Staff \with {
       midiInstrument = #"violin"
       instrumentName = #"Violin"
@@ -183,6 +192,7 @@ celloPart = \relative c' {
     } {
       \context Voice = "violin" { << \global \violinPart >> }
     }
+    %}
 
     \new Staff \with {
       midiInstrument = #"cello"
