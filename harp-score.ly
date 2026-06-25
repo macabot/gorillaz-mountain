@@ -3,7 +3,8 @@
 \include "harp-melody.ly"
 
 harpUpper = {
-  \harpUpperPickup
+  \harpUpperLeadIn
+  \harpUpperSecondHalfRepeatMelody
   \harpUpperOutroMelody
   \bar "|."
 }
@@ -20,7 +21,7 @@ harpLower = {
     midiInstrument = #"sitar"
   } <<
     \new Staff { \clef treble << \global \harpUpper >> }
-    \new Staff { \clef bass << \global \harpLower >> }
+    %\new Staff { \clef bass << \global \harpLower >> }
   >>
   \layout {
     \context { \Score \remove "Bar_number_engraver" }
