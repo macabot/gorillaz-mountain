@@ -1,14 +1,4 @@
 %{
-intro
-drums until stops
-
-flute
-flute shaker halfway guitar
-flute shaker guitar base (sounds full)
-flute'' base shingle guitar
-flute aahs no-drums, shingle, shaker
-flute
-
 
 intro
 drums until stops
@@ -43,20 +33,19 @@ outro
 
 flutePart = \relative c' {
   \flutePickup
-  \repeat unfold 1 { \fluteRepeatMelody }
+  \repeat unfold 6 { \fluteRepeatMelody }
   \fluteOutroMelody
-  R1*32
   \bar "|."
 }
 recorderPart = \relative c' {
   \partial 4 r4
   R1*7
   \recorderLeadIn
-  \repeat unfold 1 { \recorderRepeatMelody }
+  \repeat unfold 5 { \recorderRepeatMelody }
   \recorderOutroMelody
-  R1*24
   \bar "|."
 }
+%{
 percussionPart = \drummode {
   \partial 4 r4
   R1*48
@@ -72,17 +61,19 @@ pianoLower = \relative c' {
   R1*48
   \bar "|."
 }
+%}
 harpUpper = \relative c' {
   \harpUpperEmptyPickup
   R1*11
   \harpUpperLeadIn
   \harpUpperSecondHalfRepeatMelody
+  \harpUpperRepeatMelody
   \harpUpperOutroMelody
-  \bar "|."
-  \harpUpperLeadIn
+  R1*16
   \harpUpperOutroMelody
   \bar "|."
 }
+%{
 harpLower = \relative c' {
   \partial 4 r4
   R1*7
@@ -90,10 +81,13 @@ harpLower = \relative c' {
   \harpLowerOutroMelody
   \bar "|."
 }
+%}
 guitarShared = {
   \partial 4 r4
   R1 * 8
+  \repeat unfold 2 { \guitarRepeatChords }
   \guitarOutroChords
+  R1*24
 }
 guitarChordNames = {
   \set chordChanges = ##t
@@ -112,8 +106,12 @@ violinPart = \relative c' {
 celloPart = \relative c' {
   \clef bass
   \partial 4 r4
-  R1 * 8
+  R1 * 16
+  \celloRepeatMelody
   \celloOutroMelody
+  R1*8
+  \celloOutroMelody
+  R1*8
   \bar "|."
 }
 
