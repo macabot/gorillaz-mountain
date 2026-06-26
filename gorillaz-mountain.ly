@@ -33,7 +33,7 @@ outro
 
 flutePart = \relative c' {
   \flutePickup
-  \repeat unfold 6 { \fluteRepeatMelody }
+  \repeat unfold 5 { \fluteRepeatMelody }
   \fluteOutroMelody
   \bar "|."
 }
@@ -41,7 +41,7 @@ recorderPart = \relative c' {
   \partial 4 r4
   R1*7
   \recorderLeadIn
-  \repeat unfold 5 { \recorderRepeatMelody }
+  \repeat unfold 4 { \recorderRepeatMelody }
   \recorderOutroMelody
   \bar "|."
 }
@@ -67,9 +67,9 @@ harpUpper = \relative c' {
   R1*11
   \harpUpperLeadIn
   \harpUpperSecondHalfRepeatMelody
-  \harpUpperRepeatMelody
   \harpUpperOutroMelody
-  R1*16
+  R1*15
+  \harpUpperLeadIn
   \harpUpperOutroMelody
   \bar "|."
 }
@@ -85,7 +85,7 @@ harpLower = \relative c' {
 guitarShared = {
   \partial 4 r4
   R1 * 8
-  \repeat unfold 2 { \guitarRepeatChords }
+  \repeat unfold 1 { \guitarRepeatChords }
   \guitarOutroChords
   R1*24
 }
@@ -98,16 +98,17 @@ guitarPart = {
   \guitarShared
   \bar "|."
 }
+%{
 violinPart = \relative c' {
   \partial 4 r4
   R1*48
   \bar "|."
 }
+%}
 celloPart = \relative c' {
   \clef bass
   \partial 4 r4
   R1 * 16
-  \celloRepeatMelody
   \celloOutroMelody
   R1*8
   \celloOutroMelody
