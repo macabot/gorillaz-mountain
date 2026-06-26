@@ -4,8 +4,7 @@
 
 celloPart = \relative c' {
   \clef bass
-  \celloPickup
-  \celloOutroMelody
+  \celloMelody
   \bar "|."
 }
 

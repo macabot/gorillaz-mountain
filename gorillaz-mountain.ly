@@ -5,7 +5,7 @@ drums until stops
 flute
 flute guitar sitar halfway
 flute base shaker shingle guitar sitar
-flute' base shaker shingle guitar sitar
+[flute' base shaker shingle guitar sitar]
 flute aahs no-drums, shaker
 flute-high, base (first half), aahs,
 flute drums, sitar, aahs
@@ -19,6 +19,7 @@ outro
 \include "guitar-melody.ly"
 \include "cello-melody.ly"
 \include "harp-melody.ly"
+\include "voice-melody.ly"
 
 \paper {
   #(set-paper-size "a4")
@@ -109,13 +110,19 @@ celloPart = \relative c' {
   \clef bass
   \partial 4 r4
   R1 * 16
-  \celloOutroMelody
+  \celloMelody
   R1*8
-  \celloOutroMelody
+  \celloMelody
   R1*8
   \bar "|."
 }
 
+voicePart = {
+  \clef treble
+  \partial 4 r4
+  R1 * 24
+  \repeat unfold 3 { \voiceMelody }
+}
 
 % --- SCORE OUTPUT ---
 \score {
@@ -200,6 +207,16 @@ celloPart = \relative c' {
     } {
       \context Voice = "cello" << \global \celloPart >>
     }
+
+    \new Staff \with {
+      instrumentName = #"Voice"
+      shortInstrumentName = #"Vo."
+      midiInstrument = #"voice oohs"
+      %midiInstrument = #"choir aahs"
+    } {
+      \new Voice = "vocalTrack" { \global \voicePart }
+    }
+    \new Lyrics \lyricsto "vocalTrack" { \voiceLyrics }
 
   >>
   \layout {
