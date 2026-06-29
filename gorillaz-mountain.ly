@@ -1,5 +1,4 @@
 %{
-
 intro
 drums until stops
 flute
@@ -63,15 +62,15 @@ pianoLower = \relative c' {
   \bar "|."
 }
 %}
-harpUpper = \relative c' {
-  \harpUpperEmptyPickup
+harpPart = \relative c' {
+  \harpEmptyPickup
   R1*11
-  \harpUpperLeadIn
-  \harpUpperSecondHalfRepeatMelody
-  \harpUpperOutroMelody
+  \harpLeadIn
+  \harpSecondHalfRepeatMelody
+  \harpOutroMelody
   R1*15
-  \harpUpperLeadIn
-  \harpUpperOutroMelody
+  \harpLeadIn
+  \harpOutroMelody
   \bar "|."
 }
 %{
@@ -166,15 +165,14 @@ voicePart = {
     >>
     %}
 
-    \new PianoStaff \with {
+    \new Staff \with {
       % Harp with tin foil sounds like a sitar.
       midiInstrument = #"sitar"
       instrumentName = #"Harp"
       shortInstrumentName = #"Hp."
-    } <<
-      \new Staff { \clef treble << \global \harpUpper >> }
-      %\new Staff { \clef bass << \global \harpLower >> }
-    >>
+    } {
+      \context Voice = "harp" { \clef treble << \global \harpPart >> }
+    }
 
     <<
       \new ChordNames {

@@ -2,27 +2,20 @@
 \include "global.ly"
 \include "harp-melody.ly"
 
-harpUpper = {
-  \harpUpperLeadIn
-  \harpUpperSecondHalfRepeatMelody
-  \harpUpperOutroMelody
-  \bar "|."
-}
-
-harpLower = {
-  \harpLowerPickup
-  \harpLowerOutroMelody
+harpPart = {
+  \harpLeadIn
+  \harpSecondHalfRepeatMelody
+  \harpOutroMelody
   \bar "|."
 }
 
 \score {
-  \new PianoStaff \with {
+  \new Staff \with {
     % Harp with tin foil sounds like a sitar.
     midiInstrument = #"sitar"
-  } <<
-    \new Staff { \clef treble << \global \harpUpper >> }
-    %\new Staff { \clef bass << \global \harpLower >> }
-  >>
+  } {
+    \context Voice = "harp" { \clef treble << \global \harpPart >> }
+  }
   \layout {
     \context { \Score \remove "Bar_number_engraver" }
   }
