@@ -16,6 +16,7 @@ outro
 \include "flute-melody.ly"
 \include "recorder-melody.ly"
 \include "guitar-melody.ly"
+\include "violin-melody.ly"
 \include "cello-melody.ly"
 \include "harp-melody.ly"
 \include "voice-melody.ly"
@@ -98,13 +99,15 @@ guitarPart = {
   \guitarShared
   \bar "|."
 }
-%{
 violinPart = \relative c' {
   \partial 4 r4
-  R1*48
+  R1 * 16
+  \violinMelody
+  R1*8
+  \violinFirstHalfMelody R1*4
+  R1*8
   \bar "|."
 }
-%}
 celloPart = \relative c' {
   \clef bass
   \partial 4 r4
@@ -192,7 +195,6 @@ lyricsPart = {
     >>
 
     % --- STRINGS ---
-    %{
     \new Staff \with {
       midiInstrument = #"violin"
       instrumentName = #"Violin"
@@ -200,7 +202,6 @@ lyricsPart = {
     } {
       \context Voice = "violin" { << \global \violinPart >> }
     }
-    %}
 
     \new Staff \with {
       midiInstrument = #"cello"
