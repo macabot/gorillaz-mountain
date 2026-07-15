@@ -123,6 +123,10 @@ voicePart = {
   \repeat unfold 3 { \voiceMelody }
 }
 
+lyricsPart = {
+  \repeat unfold 3 { \voiceLyrics }
+}
+
 % --- SCORE OUTPUT ---
 \score {
   <<
@@ -214,7 +218,7 @@ voicePart = {
     } {
       \new Voice = "vocalTrack" { \global \voicePart }
     }
-    \new Lyrics \lyricsto "vocalTrack" { \voiceLyrics }
+    \new Lyrics \lyricsto "vocalTrack" { \lyricsPart }
 
   >>
   \layout {
