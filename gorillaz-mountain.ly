@@ -111,7 +111,7 @@ celloPart = \relative c' {
   R1 * 16
   \celloMelody
   R1*8
-  \celloMelody
+  \celloFirstHalfMelody R1*4
   R1*8
   \bar "|."
 }
