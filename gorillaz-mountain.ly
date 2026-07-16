@@ -136,6 +136,9 @@ lyricsPart = {
     % --- WOODWINDS ---
     \new Staff \with {
       midiInstrument = #"flute"
+      midiMinimumVolume = #0.7
+      midiMaximumVolume = #0.9
+      midiBalance = #0.0
       instrumentName = #"Flute"
       shortInstrumentName = #"Fl."
     } {
@@ -143,6 +146,9 @@ lyricsPart = {
     }
     \new Staff \with {
       midiInstrument = #"recorder"
+      midiMinimumVolume = #0.5
+      midiMaximumVolume = #0.8
+      midiBalance = #0.1
       instrumentName = #"Recorder"
       shortInstrumentName = #"Rec."
     } {
@@ -153,6 +159,9 @@ lyricsPart = {
     %{
     \new DrumStaff \with {
       midiInstrument = #"melodic tom" % or "synth drum"
+      midiMinimumVolume = #0.2
+      midiMaximumVolume = #0.5
+      midiBalance = #0.0
       instrumentName = #"Percussion"
       shortInstrumentName = #"Perc."
     } {
@@ -164,6 +173,9 @@ lyricsPart = {
     %{
     \new PianoStaff \with {
       midiInstrument = #"acoustic grand"
+      midiMinimumVolume = #0.4
+      midiMaximumVolume = #0.7
+      midiBalance = #-0.3
       instrumentName = #"Piano"
       shortInstrumentName = #"Pno."
     } <<
@@ -175,6 +187,9 @@ lyricsPart = {
     \new Staff \with {
       % Harp with tin foil sounds like a sitar.
       midiInstrument = #"sitar"
+      midiMinimumVolume = #0.3
+      midiMaximumVolume = #0.6
+      midiBalance = #0.5
       instrumentName = #"Harp"
       shortInstrumentName = #"Hp."
     } {
@@ -187,6 +202,9 @@ lyricsPart = {
       }
       \new Staff \with {
         midiInstrument = #"acoustic guitar (nylon)"
+        midiMinimumVolume = #0.3
+        midiMaximumVolume = #0.6
+        midiBalance = #0.3
         instrumentName = #"Guitar"
         shortInstrumentName = #"Gt."
       } {
@@ -197,6 +215,9 @@ lyricsPart = {
     % --- STRINGS ---
     \new Staff \with {
       midiInstrument = #"violin"
+      midiMinimumVolume = #0.4
+      midiMaximumVolume = #0.6
+      midiBalance = #-0.4
       instrumentName = #"Violin"
       shortInstrumentName = #"Vln."
     } {
@@ -205,6 +226,9 @@ lyricsPart = {
 
     \new Staff \with {
       midiInstrument = #"cello"
+      midiMinimumVolume = #0.3
+      midiMaximumVolume = #0.5
+      midiBalance = #0.4
       instrumentName = #"Cello"
       shortInstrumentName = #"Vc."
     } {
@@ -213,6 +237,9 @@ lyricsPart = {
 
     \new Staff \with {
       instrumentName = #"Voice"
+      midiMinimumVolume = #0.3
+      midiMaximumVolume = #0.5
+      midiBalance = #0.0
       shortInstrumentName = #"Vo."
       midiInstrument = #"voice oohs"
       %midiInstrument = #"choir aahs"
