@@ -16,7 +16,6 @@ guitarSharedChords = \transpose c c, \chordmode {
   g8 g8 g8 g8 e8:m e8:m e8:m e8:m |
 }
 
-% TODO: Is G minor correct?
 guitarRepeatChords = {
   \guitarSharedChords
   \transpose c c, \chordmode {
