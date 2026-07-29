@@ -120,7 +120,7 @@ celloPart = \relative c' {
 }
 
 voicePart = {
-  \clef treble
+  \clef "treble_8"
   \partial 4 r4
   R1 * 24
   \repeat unfold 3 { \voiceMelody }

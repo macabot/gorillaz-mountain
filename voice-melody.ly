@@ -1,12 +1,12 @@
 voiceMelody = \relative c' {
-  d'1 |
+  d1 |
   cis1 |
   b1 |
-  a2 d,2 |
-  a'1 |
-  a2 e2 |
+  a1 |
+  a1 |
+  a1 |
   g1 |
-  a2 d,2 |
+  g1 |
 }
 
 voiceLyrics = \lyricmode {
