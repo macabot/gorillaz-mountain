@@ -15,6 +15,8 @@ outro
 \include "global.ly"
 \include "flute-melody.ly"
 \include "recorder-melody.ly"
+\include "drum-rhythm.ly"
+\include "shaker-rhythm.ly"
 \include "guitar-melody.ly"
 \include "violin-melody.ly"
 \include "cello-melody.ly"
@@ -46,12 +48,24 @@ recorderPart = \relative c' {
   \recorderOutroMelody
   \bar "|."
 }
-%{
+drumPart = {
+  \partial 4 r4
+  \repeat unfold 3 { \drumRhythm }
+  R1 * 24
+  \bar "|."
+}
+shakerPart = {
+  \partial 4 r4
+  R1 * 16
+  \repeat unfold 4 { \shakerRhythm }
+  \bar "|."
+}
 percussionPart = \drummode {
   \partial 4 r4
   R1*48
   \bar "|."
 }
+%{
 pianoUpper = \relative c' {
   \partial 4 r4
   R1*48
@@ -74,15 +88,6 @@ harpPart = \relative c' {
   \harpOutroMelody
   \bar "|."
 }
-%{
-harpLower = \relative c' {
-  \partial 4 r4
-  R1*7
-  \harpLowerLeadIn
-  \harpLowerOutroMelody
-  \bar "|."
-}
-%}
 guitarShared = {
   \partial 4 r4
   R1 * 8
@@ -156,18 +161,29 @@ lyricsPart = {
     }
 
     % --- PERCUSSION ---
-    %{
     \new DrumStaff \with {
-      midiInstrument = #"melodic tom" % or "synth drum"
-      midiMinimumVolume = #0.2
-      midiMaximumVolume = #0.5
-      midiBalance = #0.0
-      instrumentName = #"Percussion"
-      shortInstrumentName = #"Perc."
+      \override StaffSymbol.line-count = #1
+      % Do not set the midiInstrument when using \drummode.
+      %midiMinimumVolume = #0.3
+      %midiMaximumVolume = #0.6
+      midiBalance = #-0.3
+      instrumentName = #"Drum"
+      shortInstrumentName = #"Dr."
     } {
-      \context DrumVoice = "percussion" { << \global \percussionPart >> }
+      \context DrumVoice = "percussion" { << \global \drumPart >> }
     }
-    %}
+
+    \new DrumStaff \with {
+      \override StaffSymbol.line-count = #1
+      % Do not set the midiInstrument when using \drummode.
+      %midiMinimumVolume = #0.2
+      %midiMaximumVolume = #0.4
+      midiBalance = #0.4
+      instrumentName = #"Shaker"
+      shortInstrumentName = #"Shk."
+    } {
+      \context DrumVoice = "shaker" { << \global \shakerPart >> }
+    }
 
     % --- KEYBOARD / PLUCKED ---
     %{
