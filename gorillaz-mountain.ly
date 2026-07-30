@@ -218,8 +218,8 @@ lyricsPart = {
       }
       \new Staff \with {
         midiInstrument = #"acoustic guitar (nylon)"
-        midiMinimumVolume = #0.3
-        midiMaximumVolume = #0.6
+        midiMinimumVolume = #0.2
+        midiMaximumVolume = #0.4
         midiBalance = #0.3
         instrumentName = #"Guitar"
         shortInstrumentName = #"Gt."
