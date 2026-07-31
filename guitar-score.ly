@@ -1,19 +1,54 @@
 \version "2.24.3"
 \include "global.ly"
+\include "flute-melody.ly"
 \include "guitar-melody.ly"
 
-% --- PDF Visual Output ---
+flutePart = \relative c' {
+  \flutePickup
+  \fluteOutroMelody
+  \bar "|."
+}
+
+fluteStaff = \new Staff \with {
+  midiInstrument = #"flute"
+  midiMinimumVolume = #0.7
+  midiMaximumVolume = #0.9
+  midiBalance = #0.0
+  instrumentName = #"Flute"
+  shortInstrumentName = #"Fl."
+} {
+  \context Voice = "flute" { << \global \flutePart >> }
+}
+
+guitarLayoutChords = {
+  \partial 4 r4
+  \guitarChords
+}
+
+guitarLayoutPart = {
+  \clef "treble_8"
+  \partial 4 r4
+  \guitarMelody
+  \bar "|."
+}
+
+guitarMidiPart = {
+  \partial 4 r4
+  \guitarMidiPattern
+}
+
+% LAYOUT SCORE
 \score {
   <<
+    \fluteStaff
+
     \new ChordNames {
-      \transpose c c, \chordmode {
-        d1 fis:m g a2 d d1 d2 a g e:m g:m d
-      }
+      \guitarLayoutChords
     }
-    \new Staff {
-      \clef "treble_8"
-      \guitarOutroChords
-      \bar "|."
+
+    \new Staff \with { } {
+      \global
+      \guitarLayoutPart
     }
   >>
   \layout {
@@ -21,16 +56,18 @@
   }
 }
 
-% --- MIDI Audio Output ---
+% MIDI SCORE
 \score {
-  \new Staff \with {
-    midiInstrument = #"acoustic guitar (nylon)"
-    midiMinimumVolume = #0.3
-    midiMaximumVolume = #1.0
-  } {
-    \guitarMidiPattern
-  }
-  \midi {
-    \tempo 4 = 90
-  }
+  <<
+    \fluteStaff
+    \new Staff \with {
+      midiInstrument = #"acoustic guitar (nylon)"
+      midiMinimumVolume = #0.2
+      midiMaximumVolume = #0.5
+    } {
+      \global
+      \guitarMidiPart
+    }
+  >>
+  \midi { }
 }
