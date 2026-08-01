@@ -6,7 +6,7 @@ guitarMelody = {
 
   % Pitch doesn't matter here. LilyPond renders 'b8' as slash heads.
   \repeat unfold 7 { b8 b8 b8 b8 b8 b8 b8 b8 | }
-  b8 b8 b4 b2 |
+  b8 b8 b8 b8 b2 |
 
   \improvisationOff
 }
