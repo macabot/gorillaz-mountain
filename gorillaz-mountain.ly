@@ -209,7 +209,7 @@ pianoStaff = \new Staff \with {
   midiMaximumVolume = #0.9
   midiBalance = #0.0
   instrumentName = #"Piano"
-  shortInstrumentName = #"Pi."
+  shortInstrumentName = #"Pno."
 } {
   \context Voice = "piano" { \clef treble << \global \pianoPart >> }
 }
