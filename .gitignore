@@ -1,5 +1,6 @@
 *.pdf
 *.midi
 *.mp3
+*.svg
 
 .vscode
