@@ -6,5 +6,6 @@ pianoMelody = \relative c'' {
   a4 a'4~ a8 a,4 a8~ |
   a8 a'4 a,8 a'4 a,4 |
   g4 g'4~ g8 g,4 cis8~ |
-  cis8 a'4 cis,8 a'4 cis,4 |
+  cis1
+  %cis8 a'4 cis,8 a'4 cis,4 |
 }

@@ -200,9 +200,9 @@ harpStaff = \new Staff \with {
 
 pianoStaff = \new Staff \with {
   midiInstrument = #"acoustic grand"
-  midiMinimumVolume = #0.3
-  midiMaximumVolume = #0.6
-  midiBalance = #0.5
+  midiMinimumVolume = #0.7
+  midiMaximumVolume = #0.9
+  midiBalance = #0.0
   instrumentName = #"Piano"
   shortInstrumentName = #"Pi."
 } {
