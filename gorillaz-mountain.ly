@@ -265,21 +265,29 @@ voiceStaff = \new Staff \with {
 % LAYOUT SCORE
 \score {
   <<
-    \fluteStaff
-    \recorderStaff
+    \new StaffGroup \with { instrumentName = #"Woodwinds" } <<
+      \fluteStaff
+      \recorderStaff
+    >>
 
-    \drumStaff
-    \shakerStaff
+    \new StaffGroup \with { instrumentName = #"Percussion" } <<
+      \drumStaff
+      \shakerStaff
+    >>
 
     \harpStaff
     \pianoStaff
+
     \new ChordNames { \guitarLayoutChords }
     \guitarLayoutStaff
 
-    \violinStaff
-    \celloStaff
     \voiceStaff
     \new Lyrics \lyricsto "vocalTrack" { \lyricsPart }
+
+    \new StaffGroup \with { instrumentName = #"Strings" } <<
+      \violinStaff
+      \celloStaff
+    >>
   >>
   \layout {
     indent = 1.5 \cm
@@ -298,11 +306,13 @@ voiceStaff = \new Staff \with {
 
     \harpStaff
     \pianoStaff
+
     \guitarMidiStaff
+
+    \voiceStaff
 
     \violinStaff
     \celloStaff
-    \voiceStaff
   >>
   \midi { }
 }
