@@ -5,6 +5,7 @@
 
 flutePart = \relative c' {
   \flutePickup
+  \fluteRepeatMelody
   \fluteOutroMelody
   \bar "|."
 }
@@ -22,19 +23,19 @@ fluteStaff = \new Staff \with {
 
 guitarLayoutChords = {
   \partial 4 r4
-  \guitarChords
+  \repeat unfold 2 { \guitarChords }
 }
 
 guitarLayoutPart = {
   \clef "treble_8"
   \partial 4 r4
-  \guitarMelody
+  \repeat unfold 2 { \guitarMelody }
   \bar "|."
 }
 
 guitarMidiPart = {
   \partial 4 r4
-  \guitarMidiPattern
+  \repeat unfold 2 { \guitarMidiPattern }
 }
 
 % LAYOUT SCORE

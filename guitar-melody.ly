@@ -5,10 +5,7 @@ guitarMelody = {
   \improvisationOn
 
   % Pitch doesn't matter here. LilyPond renders 'b8' as slash heads.
-  \repeat unfold 3 { b8 b8 b8 b8 b8 b8 b4 | }
-  b8 b8 b4 b8 b8 b4 |
-  b8 b8 b8 b8 b8 b8 b4 |
-  \repeat unfold 2 { b8 b8 b4 b8 b8 b4 | }
+  \repeat unfold 7 { b8 b8 b8 b8 b8 b8 b8 b8 | }
   b8 b8 b4 b2 |
 
   \improvisationOff
@@ -59,23 +56,23 @@ gmUp      = { \grace { g'32 d' bes } <g, d g>8 }
 
 % --- Full MIDI Track ---
 guitarMidiPattern = {
-  \dDownAcc\sustainOn \dUp \dDown \dUp \dDown \dUp \dDownQ |
+  \dDownAcc\sustainOn \dDown \dDown \dDown \dDown \dDown \dDown \dDown |
 
-  \fsmDownAcc\sustainOff\sustainOn \fsmUp \fsmDown \fsmUp \fsmDown \fsmUp \fsmDownQ |
+  \fsmDownAcc\sustainOff\sustainOn \fsmDown \fsmDown \fsmDown \fsmDown \fsmDown \fsmDown \fsmDown |
 
-  \gDownAcc\sustainOff\sustainOn \gUp \gDown \gUp \gDown \gUp \gDownQ |
+  \gDownAcc\sustainOff\sustainOn \gDown \gDown \gDown \gDown \gDown \gDown \gDown |
 
-  \aDownAcc\sustainOff\sustainOn \aUp \aDownQ
-  \dDownAcc\sustainOff\sustainOn \dUp \dDownQ |
+  \aDownAcc\sustainOff\sustainOn \aDown \aDown \aDown
+  \dDownAcc\sustainOff\sustainOn \dDown \dDown \dDown |
 
-  \dDownAcc\sustainOff\sustainOn \dUp \dDown \dUp \dDown \dUp \dDownQ |
+  \dDownAcc\sustainOff\sustainOn \dDown \dDown \dDown \dDown \dDown \dDown \dDown |
 
-  \dDownAcc\sustainOff\sustainOn \dUp \dDownQ
-  \aDownAcc\sustainOff\sustainOn \aUp \aDownQ |
+  \dDownAcc\sustainOff\sustainOn \dDown \dDown \dDown
+  \aDownAcc\sustainOff\sustainOn \aDown \aDown \aDown |
 
-  \gDownAcc\sustainOff\sustainOn \gUp \gDownQ
-  \emDownAcc\sustainOff\sustainOn \emUp \emDownQ |
+  \gDownAcc\sustainOff\sustainOn \gDown \gDown \gDown
+  \emDownAcc\sustainOff\sustainOn \emDown \emDown \emDown |
 
-  \gmDownAcc\sustainOff\sustainOn \gmUp \gmDownQ
+  \gmDownAcc\sustainOff\sustainOn \gmDown \gmDown \gmDown
   \dDownAccH\sustainOff |
 }
