@@ -22,6 +22,12 @@ gantt
     Harp                :active, 00:40, 00:48
 
     section Rhythm
+    Drum                :active, 00:00, 00:24
+    [Rest]              :done,   00:24, 00:48
+
+    [Rest]              :done,   00:00, 00:16
+    Shaker              :active, 00:16, 00:48
+
     [Rest]              :done,   00:00, 00:08
     Guitar              :active, 00:08, 00:24
     [Rest]              :done,   00:24, 00:48
