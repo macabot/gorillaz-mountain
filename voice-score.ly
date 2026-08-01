@@ -5,6 +5,7 @@
 
 flutePart = \relative c' {
   \flutePickup
+  \fluteRepeatMelody
   \fluteOutroMelody
   \bar "|."
 }
@@ -12,7 +13,7 @@ flutePart = \relative c' {
 voicePart = {
   \clef "treble_8"
   \partial 4 r4
-  \voiceMelody
+  \repeat unfold 2 { \voiceMelody }
 }
 
 \score {
@@ -29,14 +30,16 @@ voicePart = {
     }
 
     \new Staff \with {
+      midiInstrument = #"voice oohs"
+      midiMinimumVolume = #0.3
+      midiMaximumVolume = #0.5
+      midiBalance = #0.0
       instrumentName = #"Voice"
       shortInstrumentName = #"Vo."
-      midiInstrument = #"voice oohs"
-      %midiInstrument = #"choir aahs"
     } {
       \new Voice = "vocalTrack" { \global \voicePart }
     }
-    \new Lyrics \lyricsto "vocalTrack" { \voiceLyrics }
+    \new Lyrics \lyricsto "vocalTrack" { \repeat unfold 2 { \voiceLyrics } }
   >>
   \layout {
     \context { \Score \remove "Bar_number_engraver" }
