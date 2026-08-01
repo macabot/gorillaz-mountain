@@ -26,7 +26,10 @@
 
 flutePart = \relative c' {
   \flutePickup
-  \repeat unfold 6 { \fluteRepeatMelody }
+  \fluteRepeatMelody
+  \fluteOutroMelody
+  R1*16
+  \repeat unfold 2 { \fluteRepeatMelody }
   \fluteOutroMelody
   \bar "|."
 }

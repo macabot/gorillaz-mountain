@@ -11,7 +11,9 @@ gantt
     tickInterval 8second
 
     section Melody
-    Flute               :active, 00:00, 00:56
+    Flute               :active, 00:00, 00:16
+    [Rest]              :done,   00:16, 00:32
+    Flute               :active, 00:32, 00:56
 
     [Rest]              :done,   00:00, 00:08
     Recorder            :active, 00:08, 00:32
