@@ -36,7 +36,9 @@ gantt
     Drum                :active, 00:48, 00:56
 
     [Rest]              :done,   00:00, 00:16
-    Shaker              :active, 00:16, 00:56
+    Shaker              :active, 00:16, 00:44
+    [Rest]              :done,   00:44, 00:48
+    Shaker              :active, 00:48, 00:56
 
     [Rest]              :done,   00:00, 00:08
     Guitar              :active, 00:08, 00:32

@@ -3,3 +3,9 @@ shakerRhythm = \drummode {
     mar4 r4 mar4 r4
   }
 }
+
+shakerHalfRhythm = \drummode {
+  \repeat unfold 4 {
+    mar4 r4 mar4 r4
+  }
+}

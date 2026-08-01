@@ -56,7 +56,9 @@ drumPart = {
 shakerPart = {
   \partial 4 r4
   R1 * 16
-  \repeat unfold 5 { \shakerRhythm }
+  \repeat unfold 3 { \shakerRhythm }
+  \shakerHalfRhythm R1*4
+  \shakerRhythm
   \bar "|."
 }
 
