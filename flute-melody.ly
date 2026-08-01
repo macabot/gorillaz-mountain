@@ -23,5 +23,5 @@ fluteRepeatMelody  = {
 
 fluteOutroMelody = {
   \fluteSharedMelody
-  \relative c' { a'4 fis8 e8 d4 r4 }
+  \relative c' { a'4 fis8 e8 d2 }
 }
