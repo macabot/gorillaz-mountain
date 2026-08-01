@@ -42,6 +42,7 @@ flutePart = \relative c' {
   \fluteOutroMelody
   \bar "|."
 }
+
 recorderPart = \relative c' {
   \partial 4 r4
   R1*7
@@ -50,12 +51,14 @@ recorderPart = \relative c' {
   \recorderOutroMelody
   \bar "|."
 }
+
 drumPart = {
   \partial 4 r4
   \repeat unfold 3 { \drumRhythm }
   R1 * 24
   \bar "|."
 }
+
 shakerPart = {
   \partial 4 r4
   R1 * 16
@@ -67,6 +70,7 @@ percussionPart = \drummode {
   R1*48
   \bar "|."
 }
+
 harpPart = \relative c' {
   \harpEmptyPickup
   R1*11
@@ -78,22 +82,28 @@ harpPart = \relative c' {
   \harpOutroMelody
   \bar "|."
 }
-%{guitarShared = {
+
+guitarLayoutChords = {
   \partial 4 r4
   R1 * 8
-  \repeat unfold 1 { \guitarRepeatChords }
-  \guitarOutroChords
-  R1*24
+  \repeat unfold 2 { \guitarChords }
+  R1 * 24
 }
-guitarChordNames = {
-  \set chordChanges = ##t
-  \guitarShared
-}
-guitarPart = {
+guitarLayoutPart = {
   \clef "treble_8"
-  \guitarShared
+  \partial 4 r4
+  R1 * 8
+  \repeat unfold 2 { \guitarMelody }
+  R1 * 24
   \bar "|."
-}%}
+}
+guitarMidiPart = {
+  \partial 4 r4
+  R1 * 8
+  \repeat unfold 2 { \guitarMidiPattern }
+  R1 * 24
+}
+
 violinPart = \relative c' {
   \partial 4 r4
   R1 * 16
@@ -103,6 +113,7 @@ violinPart = \relative c' {
   R1*8
   \bar "|."
 }
+
 celloPart = \relative c' {
   \clef bass
   \partial 4 r4
@@ -120,7 +131,6 @@ voicePart = {
   R1 * 24
   \repeat unfold 3 { \voiceMelody }
 }
-
 lyricsPart = {
   \repeat unfold 3 { \voiceLyrics }
 }
@@ -184,6 +194,20 @@ harpStaff = \new Staff \with {
   \context Voice = "harp" { \clef treble << \global \harpPart >> }
 }
 
+guitarLayoutStaff = \new Staff \with {
+  instrumentName = #"Guitar"
+  shortInstrumentName = #"Gt."
+} {
+  \context Voice = "guitar" { << \global \guitarLayoutPart >> }
+}
+guitarMidiStaff = \new Staff \with {
+  midiInstrument = #"acoustic guitar (nylon)"
+  midiMinimumVolume = #0.2
+  midiMaximumVolume = #0.5
+} {
+  \context Voice = "guitar" { << \global \guitarMidiPart >> }
+}
+
 violinStaff = \new Staff \with {
   midiInstrument = #"violin"
   midiMinimumVolume = #0.4
@@ -218,17 +242,19 @@ voiceStaff = \new Staff \with {
 }
 
 % --- SCORE OUTPUT ---
+% LAYOUT SCORE
 \score {
   <<
     \fluteStaff
     \recorderStaff
 
-    % TODO: Guitar
     \drumStaff
     \shakerStaff
 
     % TODO: Piano
     \harpStaff
+    \new ChordNames { \guitarLayoutChords }
+    \guitarLayoutStaff
 
     \violinStaff
     \celloStaff
@@ -239,7 +265,24 @@ voiceStaff = \new Staff \with {
     indent = 1.5 \cm
     short-indent = 0.5 \cm
   }
-  \midi { }
 }
 
-% TODO: Create separate score for midi, because guitar has a separate layout and midi
+% MIDI SCORE
+\score {
+  <<
+    \fluteStaff
+    \recorderStaff
+
+    \drumStaff
+    \shakerStaff
+
+    % TODO: Piano
+    \harpStaff
+    \guitarMidiStaff
+
+    \violinStaff
+    \celloStaff
+    \voiceStaff
+  >>
+  \midi { }
+}
