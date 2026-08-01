@@ -28,7 +28,8 @@ flutePart = \relative c' {
   \flutePickup
   \fluteRepeatMelody
   \fluteOutroMelody
-  R1*16
+  R1*15
+  \fluteLeadIn
   \repeat unfold 2 { \fluteRepeatMelody }
   \fluteOutroMelody
   \bar "|."
@@ -62,9 +63,9 @@ shakerPart = {
 }
 
 harpPart = \relative c' {
-  \harpEmptyPickup
+  \harpInstructionPickup
   R1*11
-  \harpLeadIn
+  \harpSecondHalfLeadIn
   \harpSecondHalfRepeatMelody
   \harpRepeatMelody
   \harpOutroMelody

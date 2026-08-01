@@ -1,8 +1,12 @@
-harpEmptyPickup = {
+harpInstructionPickup = {
   \partial 4 r4^\markup \italic "Weave tin foil between strings"
 }
 
 harpLeadIn = \relative c' {
+  r4 r4 r4 fis8 a8
+}
+
+harpSecondHalfLeadIn = \relative c' {
   r4 r4 r4 d8 fis8
 }
 
@@ -35,7 +39,7 @@ harpRepeatMelody = {
 }
 
 harpOutro = \relative c' {
-  a'8 \acciaccatura g8 a8 fis8 e8 d4 r4
+  a'8 \acciaccatura g8 a8 fis8 e8 d2
 }
 
 harpSecondHalfOutroMelody = {
