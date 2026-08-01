@@ -36,15 +36,11 @@ flutePart = \relative c' {
 
 recorderPart = \relative c' {
   \partial 4 r4
-  R1*7
-  \recorderLeadIn
-  \repeat unfold 2 { \recorderRepeatMelody }
-  \recorderOutroMelody
-  R1*7
-  \recorderLeadIn
-  \recorderFirstHalfMelody R1*3
-  \recorderLeadIn
-  \recorderOutroMelody
+  R1*8
+  \repeat unfold 3 { \recorderMelody }
+  R1*8
+  \recorderFirstHalfMelody R1*4
+  \recorderMelody
   \bar "|."
 }
 
