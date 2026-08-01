@@ -43,7 +43,9 @@ guitarMidiPart = {
   <<
     \fluteStaff
 
-    \new ChordNames {
+    \new ChordNames \with {
+      noChordSymbol = ##f
+    } {
       \guitarLayoutChords
     }
 

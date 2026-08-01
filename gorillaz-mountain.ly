@@ -274,7 +274,11 @@ voiceStaff = \new Staff \with {
     \harpStaff
     \pianoStaff
 
-    \new ChordNames { \guitarLayoutChords }
+    \new ChordNames \with {
+      noChordSymbol = ##f
+    } {
+      \guitarLayoutChords
+    }
     \guitarLayoutStaff
 
     \voiceStaff
