@@ -1,16 +1,3 @@
-%{
-intro
-drums until stops
-flute
-flute guitar sitar halfway
-flute base shaker shingle guitar sitar
-[flute' base shaker shingle guitar sitar]
-flute aahs no-drums, shaker
-flute-high, base (first half), aahs,
-flute drums, sitar, aahs
-outro
-%}
-
 \version "2.24.3"
 \include "global.ly"
 \include "flute-melody.ly"
@@ -21,6 +8,7 @@ outro
 \include "violin-melody.ly"
 \include "cello-melody.ly"
 \include "harp-melody.ly"
+\include "piano-melody.ly"
 \include "voice-melody.ly"
 
 \paper {
@@ -38,7 +26,7 @@ outro
 
 flutePart = \relative c' {
   \flutePickup
-  \repeat unfold 5 { \fluteRepeatMelody }
+  \repeat unfold 6 { \fluteRepeatMelody }
   \fluteOutroMelody
   \bar "|."
 }
@@ -47,27 +35,28 @@ recorderPart = \relative c' {
   \partial 4 r4
   R1*7
   \recorderLeadIn
-  \repeat unfold 4 { \recorderRepeatMelody }
+  \repeat unfold 2 { \recorderRepeatMelody }
+  \recorderOutroMelody
+  R1*7
+  \recorderLeadIn
+  \recorderFirstHalfMelody R1*3
+  \recorderLeadIn
   \recorderOutroMelody
   \bar "|."
 }
 
 drumPart = {
   \partial 4 r4
-  \repeat unfold 3 { \drumRhythm }
-  R1 * 24
+  \repeat unfold 4 { \drumRhythm }
+  R1 * 16
+  \drumRhythm
   \bar "|."
 }
 
 shakerPart = {
   \partial 4 r4
   R1 * 16
-  \repeat unfold 4 { \shakerRhythm }
-  \bar "|."
-}
-percussionPart = \drummode {
-  \partial 4 r4
-  R1*48
+  \repeat unfold 5 { \shakerRhythm }
   \bar "|."
 }
 
@@ -76,6 +65,7 @@ harpPart = \relative c' {
   R1*11
   \harpLeadIn
   \harpSecondHalfRepeatMelody
+  \harpRepeatMelody
   \harpOutroMelody
   R1*15
   \harpLeadIn
@@ -83,52 +73,66 @@ harpPart = \relative c' {
   \bar "|."
 }
 
+pianoPart = \relative c' {
+  \partial 4 r4
+  R1 * 24
+  \ottava #1
+  \repeat unfold 2 { \pianoMelody }
+  \ottava #0
+  R1 * 8
+  \ottava #1
+  \pianoMelody
+  \ottava #0
+}
+
 guitarLayoutChords = {
   \partial 4 r4
   R1 * 8
-  \repeat unfold 2 { \guitarChords }
-  R1 * 24
+  \repeat unfold 3 { \guitarChords }
+  R1 * 16
+  \guitarChords
 }
 guitarLayoutPart = {
   \clef "treble_8"
   \partial 4 r4
   R1 * 8
-  \repeat unfold 2 { \guitarMelody }
-  R1 * 24
+  \repeat unfold 3 { \guitarMelody }
+  R1 * 16
+  \guitarMelody
   \bar "|."
 }
 guitarMidiPart = {
   \partial 4 r4
   R1 * 8
-  \repeat unfold 2 { \guitarMidiPattern }
-  R1 * 24
+  \repeat unfold 3 { \guitarMidiPattern }
+  R1 * 16
+  \guitarMidiPattern
 }
 
 violinPart = \relative c' {
   \partial 4 r4
   R1 * 16
-  \violinMelody
+  \repeat unfold 2 { \violinMelody }
   R1*8
   \violinFirstHalfMelody R1*4
-  R1*8
+  \violinMelody
   \bar "|."
 }
 
 celloPart = \relative c' {
   \clef bass
   \partial 4 r4
-  R1 * 16
-  \celloMelody
+  \repeat unfold 4 { \celloMelody }
   R1*8
   \celloFirstHalfMelody R1*4
-  R1*8
+  \celloMelody
   \bar "|."
 }
 
 voicePart = {
   \clef "treble_8"
   \partial 4 r4
-  R1 * 24
+  R1 * 32
   \repeat unfold 3 { \voiceMelody }
 }
 lyricsPart = {
@@ -194,6 +198,17 @@ harpStaff = \new Staff \with {
   \context Voice = "harp" { \clef treble << \global \harpPart >> }
 }
 
+pianoStaff = \new Staff \with {
+  midiInstrument = #"acoustic grand"
+  midiMinimumVolume = #0.3
+  midiMaximumVolume = #0.6
+  midiBalance = #0.5
+  instrumentName = #"Piano"
+  shortInstrumentName = #"Pi."
+} {
+  \context Voice = "piano" { \clef treble << \global \pianoPart >> }
+}
+
 guitarLayoutStaff = \new Staff \with {
   instrumentName = #"Guitar"
   shortInstrumentName = #"Gt."
@@ -251,8 +266,8 @@ voiceStaff = \new Staff \with {
     \drumStaff
     \shakerStaff
 
-    % TODO: Piano
     \harpStaff
+    \pianoStaff
     \new ChordNames { \guitarLayoutChords }
     \guitarLayoutStaff
 
@@ -276,8 +291,8 @@ voiceStaff = \new Staff \with {
     \drumStaff
     \shakerStaff
 
-    % TODO: Piano
     \harpStaff
+    \pianoStaff
     \guitarMidiStaff
 
     \violinStaff
