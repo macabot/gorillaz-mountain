@@ -78,6 +78,6 @@ Hier zien we dat de fluit, trommel en cello samen beginnen. Vervolgens springen 
 Hieronder vind je de pagina's naar de bladmuziek van zowel het volledige arrangement als voor individuele instrumenten en groepjes van instrumenten:
 
 - [Het volledige arrangement](arrangement)
-- [fluit](fluit)
+- [Fluit](fluit)
 
 Op elke pagina kan je de bladmuziek downloaded. Ook vind je een opname van hoe het ongeveer klinkt. De opnames zijn met computer gemaakt. In het echt klinkt het vast veel mooier.
