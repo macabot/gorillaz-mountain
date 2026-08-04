@@ -1,15 +1,15 @@
 \version "2.24.3"
-\include "global.ly"
-\include "flute-melody.ly"
-\include "recorder-melody.ly"
-\include "drum-rhythm.ly"
-\include "shaker-rhythm.ly"
-\include "guitar-melody.ly"
-\include "violin-melody.ly"
-\include "cello-melody.ly"
-\include "harp-melody.ly"
-\include "piano-melody.ly"
-\include "voice-melody.ly"
+\include "../global.ly"
+\include "../parts/flute.ly"
+\include "../parts/recorder.ly"
+\include "../parts/drum.ly"
+\include "../parts/shaker.ly"
+\include "../parts/harp.ly"
+\include "../parts/piano.ly"
+\include "../parts/guitar.ly"
+\include "../parts/voice.ly"
+\include "../parts/violin.ly"
+\include "../parts/cello.ly"
 
 \paper {
   #(set-paper-size "a4")
@@ -111,6 +111,16 @@ guitarMidiPart = {
   \guitarMidiPattern
 }
 
+voicePart = {
+  \clef "treble_8"
+  \partial 4 r4
+  R1 * 32
+  \repeat unfold 3 { \voiceMelody }
+}
+lyricsPart = {
+  \repeat unfold 3 { \voiceLyrics }
+}
+
 violinPart = \relative c' {
   \partial 4 r4
   R1 * 16
@@ -129,16 +139,6 @@ celloPart = \relative c' {
   \celloFirstHalfMelody R1*4
   \celloMelody
   \bar "|."
-}
-
-voicePart = {
-  \clef "treble_8"
-  \partial 4 r4
-  R1 * 32
-  \repeat unfold 3 { \voiceMelody }
-}
-lyricsPart = {
-  \repeat unfold 3 { \voiceLyrics }
 }
 
 % --- STAFFS ---
@@ -225,6 +225,17 @@ guitarMidiStaff = \new Staff \with {
   \context Voice = "guitar" { << \global \guitarMidiPart >> }
 }
 
+voiceStaff = \new Staff \with {
+  instrumentName = #"Voice"
+  midiMinimumVolume = #0.3
+  midiMaximumVolume = #0.5
+  midiBalance = #0.0
+  shortInstrumentName = #"Vo."
+  midiInstrument = #"voice oohs"
+} {
+  \new Voice = "vocalTrack" { \global \voicePart }
+}
+
 violinStaff = \new Staff \with {
   midiInstrument = #"violin"
   midiMinimumVolume = #0.4
@@ -245,17 +256,6 @@ celloStaff = \new Staff \with {
   shortInstrumentName = #"Vc."
 } {
   \context Voice = "cello" << \global \celloPart >>
-}
-
-voiceStaff = \new Staff \with {
-  instrumentName = #"Voice"
-  midiMinimumVolume = #0.3
-  midiMaximumVolume = #0.5
-  midiBalance = #0.0
-  shortInstrumentName = #"Vo."
-  midiInstrument = #"voice oohs"
-} {
-  \new Voice = "vocalTrack" { \global \voicePart }
 }
 
 % --- SCORE OUTPUT ---

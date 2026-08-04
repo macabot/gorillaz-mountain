@@ -1,0 +1,3 @@
+{
+    "vslilypond.compilation.additionalCommandLineArguments": "-o ../../build"
+  }

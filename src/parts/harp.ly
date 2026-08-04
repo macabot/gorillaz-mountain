@@ -1,3 +1,5 @@
+\version "2.24.3"
+
 harpInstructionPickup = {
   \partial 4 r4^\markup \italic "Weave tin foil between strings"
 }
