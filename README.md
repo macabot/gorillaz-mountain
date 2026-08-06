@@ -10,6 +10,7 @@ Sources:
 ## Requirements
 
 - [LilyPond](https://lilypond.org/)
+- [Docker](https://www.docker.com/)
 
 ### Optional
 
