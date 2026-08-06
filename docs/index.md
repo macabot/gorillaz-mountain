@@ -4,7 +4,7 @@ Hoi allemaal,
 
 Zo'n beetje elk jaar komen we bij elkaar om ingestudeerde muziekstukken aan elkaar voor te dragen.
 Dit keer leek het me leuk als we samen een muziekstuk oefenen.
-Iedereen hoef slechts 8 maten te leren. Deze 8 maten worden op verschillende momenten in het stuk herhaalt.
+Iedereen hoeft slechts 8 maten te leren. Deze 8 maten worden op verschillende momenten in het stuk herhaalt.
 
 Ik heb een arrangement geschreven van [The Mountain door Gorillaz](https://youtu.be/a2IdAW2A1ug?si=ESMKC07APd6FcPqz) voor de (dwars)fluit, blokfluit, harp, piano, trommel, shaker, gitaar, viool, cello en zang. Dus iedereen kan meedoen. Hieronder is een overzicht van hoe de 8 maten per instrument zich herhalen en overlappen met elkaar:
 
@@ -80,4 +80,4 @@ Hieronder vind je de pagina's naar de bladmuziek van zowel het volledige arrange
 - [Het volledige arrangement](arrangement)
 - [Fluit](fluit)
 
-Op elke pagina kan je de bladmuziek downloaded. Ook vind je een opname van hoe het ongeveer klinkt. De opnames zijn met computer gemaakt. In het echt klinkt het vast veel mooier.
+Op elke pagina kan je de bladmuziek downloaded. Ook vind je een opname van hoe het ongeveer klinkt. De opnames zijn met de computer gemaakt. In het echt zal het nog mooier klinken.
