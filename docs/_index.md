@@ -1,9 +1,7 @@
 +++
-title = 'Arrangement van The Mountain door Gorillaz'
+title = 'Gorillaz - The Mountain'
 date = 2026-08-04
 +++
-
-# Arrangement van The Mountain door Gorillaz
 
 Hoi allemaal,
 
