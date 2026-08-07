@@ -18,8 +18,8 @@
 \header {
   title = "The Mountain"
   composer = "Gorillaz ft. Dennis Hopper, Ajay Prasanna, Anoushka Shankar, Amaan & Ayaan Ali Bangash"
-  arranger = "Arranged by Michael Cabot"
-  tagline = "Cover for the MidwoudMuziekMiddag"
+  arranger = "Arrangement: Michael Cabot"
+  tagline = "Arrangement for the MidwoudMuziekMiddag"
 }
 
 % --- PARTS ---
@@ -143,12 +143,7 @@ celloPart = \relative c' {
 
 % --- STAFFS ---
 fluteStaff = \new Staff \with {
-  midiInstrument = #"flute"
-  midiMinimumVolume = #0.7
-  midiMaximumVolume = #0.9
-  midiBalance = #0.0
-  instrumentName = #"Flute"
-  shortInstrumentName = #"Fl."
+  \fluteStaffSettings
 } {
   \context Voice = "flute" { << \global \flutePart >> }
 }
@@ -158,8 +153,8 @@ recorderStaff = \new Staff \with {
   midiMinimumVolume = #0.5
   midiMaximumVolume = #0.8
   midiBalance = #0.1
-  instrumentName = #"Recorder"
-  shortInstrumentName = #"Rec."
+  instrumentName = #"Blokfluit"
+  shortInstrumentName = #"Bl."
 } {
   \context Voice = "recorder" { << \global \recorderPart >> }
 }
@@ -170,8 +165,8 @@ drumStaff = \new DrumStaff \with {
   %midiMinimumVolume = #0.3
   %midiMaximumVolume = #0.6
   midiBalance = #-0.3
-  instrumentName = #"Drum"
-  shortInstrumentName = #"Dr."
+  instrumentName = #"Trommel"
+  shortInstrumentName = #"Tr."
 } {
   \context DrumVoice = "percussion" { << \global \drumPart >> }
 }
@@ -212,8 +207,8 @@ pianoStaff = \new Staff \with {
 }
 
 guitarLayoutStaff = \new Staff \with {
-  instrumentName = #"Guitar"
-  shortInstrumentName = #"Gt."
+  instrumentName = #"Gitaar"
+  shortInstrumentName = #"Git."
 } {
   \context Voice = "guitar" { << \global \guitarLayoutPart >> }
 }
@@ -226,12 +221,12 @@ guitarMidiStaff = \new Staff \with {
 }
 
 voiceStaff = \new Staff \with {
-  instrumentName = #"Voice"
+  midiInstrument = #"voice oohs"
   midiMinimumVolume = #0.3
   midiMaximumVolume = #0.5
   midiBalance = #0.0
-  shortInstrumentName = #"Vo."
-  midiInstrument = #"voice oohs"
+  instrumentName = #"Zang"
+  shortInstrumentName = #"Zg."
 } {
   \new Voice = "vocalTrack" { \global \voicePart }
 }
@@ -241,8 +236,8 @@ violinStaff = \new Staff \with {
   midiMinimumVolume = #0.4
   midiMaximumVolume = #0.6
   midiBalance = #-0.4
-  instrumentName = #"Violin"
-  shortInstrumentName = #"Vln."
+  instrumentName = #"Viool"
+  shortInstrumentName = #"Vl."
 } {
   \context Voice = "violin" { << \global \violinPart >> }
 }
