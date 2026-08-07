@@ -7,9 +7,9 @@ Hoi allemaal,
 
 Zo'n beetje elk jaar komen we bij elkaar om ingestudeerde muziekstukken aan elkaar voor te dragen.
 Dit keer leek het me leuk als we samen een muziekstuk oefenen.
-Iedereen hoeft slechts 8 maten te leren. Deze 8 maten worden op verschillende momenten in het stuk herhaalt.
+Iedereen hoeft slechts 8 maten te leren. Deze 8 maten worden op verschillende momenten in het stuk herhaald.
 
-Ik heb een arrangement geschreven van [The Mountain door Gorillaz](https://youtu.be/a2IdAW2A1ug?si=ESMKC07APd6FcPqz) voor de (dwars)fluit, blokfluit, harp, piano, trommel, shaker, gitaar, viool, cello en zang. Dus iedereen kan meedoen. Hieronder is een overzicht van hoe de 8 maten per instrument zich herhalen en overlappen met elkaar:
+Ik heb een arrangement geschreven van [The Mountain door Gorillaz](https://youtu.be/a2IdAW2A1ug?si=ESMKC07APd6FcPqz) voor de dwarsfluit, blokfluit, harp, piano, trommel, shaker, gitaar, viool, cello en zang. Dus iedereen kan meedoen. Hieronder is een overzicht van hoe de 8 maten per instrument zich herhalen en overlappen met elkaar:
 
 ![Overzicht arrangement](../dist/svg/arrangement-overview.svg)
 
@@ -18,6 +18,9 @@ Hier zien we dat de fluit, trommel en cello samen beginnen. Vervolgens springen 
 Hieronder vind je de pagina's naar de bladmuziek van zowel het volledige arrangement als voor individuele instrumenten en groepjes van instrumenten:
 
 - [Het volledige arrangement](arrangement)
-- [Fluit](fluit)
+- Instrumenten
+  - [Dwarsfluit](dwarsfluit)
+- Groepjes
+  - [Dwarsfluit en cello](dwarsfluit-cello)
 
 Op elke pagina kan je de bladmuziek downloaded. Ook vind je een opname van hoe het ongeveer klinkt. De opnames zijn met de computer gemaakt. In het echt zal het nog mooier klinken.
