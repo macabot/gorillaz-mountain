@@ -1,3 +1,5 @@
+\version "2.24.3"
+
 flutePickup = \relative c' {
   \partial 4 fis8 a8
 }

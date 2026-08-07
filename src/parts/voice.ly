@@ -1,3 +1,5 @@
+\version "2.24.3"
+
 voiceMelody = \relative c' {
   d1 |
   cis1 |

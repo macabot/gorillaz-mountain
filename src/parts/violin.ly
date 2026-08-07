@@ -1,3 +1,5 @@
+\version "2.24.3"
+
 violinFirstHalfMelody = \relative c' {
   fis1 | % D
   a1 | % Fis:m

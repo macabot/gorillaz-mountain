@@ -1,3 +1,5 @@
+\version "2.24.3"
+
 pianoMelody = \relative c'' {
   d'4 a'4~ a8 d,4 cis8~ |
   cis8 a'4 cis,8 a'4 cis,4 |

@@ -1,3 +1,5 @@
+\version "2.24.3"
+
 celloFirstHalfMelody = \relative c, {
   d'1 |
   cis1 |

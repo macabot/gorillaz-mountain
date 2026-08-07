@@ -2,5 +2,6 @@
 *.midi
 *.mp3
 *.svg
+.tmp
 
-.vscode
+build

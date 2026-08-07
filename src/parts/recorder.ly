@@ -1,3 +1,5 @@
+\version "2.24.3"
+
 recorderFirstHalfMelody = \relative c' {
   r4 fis8 a8 d2 |
   r4 fis,8 a8 cis2 |

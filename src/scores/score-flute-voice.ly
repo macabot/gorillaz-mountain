@@ -1,7 +1,7 @@
 \version "2.24.3"
-\include "global.ly"
-\include "flute-melody.ly"
-\include "voice-melody.ly"
+\include "../global.ly"
+\include "../parts/flute.ly"
+\include "../parts/voice.ly"
 
 flutePart = \relative c' {
   \flutePickup

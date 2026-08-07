@@ -1,7 +1,7 @@
 \version "2.24.3"
-\include "global.ly"
-\include "recorder-melody.ly"
-\include "harp-melody.ly"
+\include "../global.ly"
+\include "../parts/recorder.ly"
+\include "../parts/harp.ly"
 
 recorderPart = \relative c' {
   R1*5

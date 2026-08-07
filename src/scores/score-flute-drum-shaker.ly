@@ -1,8 +1,8 @@
 \version "2.24.3"
-\include "global.ly"
-\include "flute-melody.ly"
-\include "drum-rhythm.ly"
-\include "shaker-rhythm.ly"
+\include "../global.ly"
+\include "../parts/flute.ly"
+\include "../parts/drum.ly"
+\include "../parts/shaker.ly"
 
 flutePart = \relative c' {
   \flutePickup
