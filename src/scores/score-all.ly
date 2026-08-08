@@ -18,8 +18,8 @@
 \header {
   title = "The Mountain"
   composer = "Gorillaz ft. Dennis Hopper, Ajay Prasanna, Anoushka Shankar, Amaan & Ayaan Ali Bangash"
-  arranger = "Arranged by Michael Cabot"
-  tagline = "Cover for the MidwoudMuziekMiddag"
+  arranger = "Arrangement: Michael Cabot"
+  tagline = "Arrangement voor de MidwoudMuziekMiddag"
 }
 
 % --- PARTS ---
@@ -143,117 +143,66 @@ celloPart = \relative c' {
 
 % --- STAFFS ---
 fluteStaff = \new Staff \with {
-  midiInstrument = #"flute"
-  midiMinimumVolume = #0.7
-  midiMaximumVolume = #0.9
-  midiBalance = #0.0
-  instrumentName = #"Flute"
-  shortInstrumentName = #"Fl."
+  \fluteStaffSettings
 } {
   \context Voice = "flute" { << \global \flutePart >> }
 }
 
 recorderStaff = \new Staff \with {
-  midiInstrument = #"recorder"
-  midiMinimumVolume = #0.5
-  midiMaximumVolume = #0.8
-  midiBalance = #0.1
-  instrumentName = #"Recorder"
-  shortInstrumentName = #"Rec."
+  \recorderStaffSettings
 } {
   \context Voice = "recorder" { << \global \recorderPart >> }
 }
 
 drumStaff = \new DrumStaff \with {
-  \override StaffSymbol.line-count = #1
-  % Do not set the midiInstrument when using \drummode.
-  %midiMinimumVolume = #0.3
-  %midiMaximumVolume = #0.6
-  midiBalance = #-0.3
-  instrumentName = #"Drum"
-  shortInstrumentName = #"Dr."
+  \drumStaffSettings
 } {
   \context DrumVoice = "percussion" { << \global \drumPart >> }
 }
 
 shakerStaff = \new DrumStaff \with {
-  \override StaffSymbol.line-count = #1
-  % Do not set the midiInstrument when using \drummode.
-  %midiMinimumVolume = #0.2
-  %midiMaximumVolume = #0.4
-  midiBalance = #0.4
-  instrumentName = #"Shaker"
-  shortInstrumentName = #"Shk."
+  \shakerStaffSettings
 } {
   \context DrumVoice = "shaker" { << \global \shakerPart >> }
 }
 
 harpStaff = \new Staff \with {
-  % Harp with tin foil sounds like a sitar.
-  midiInstrument = #"sitar"
-  midiMinimumVolume = #0.3
-  midiMaximumVolume = #0.6
-  midiBalance = #0.5
-  instrumentName = #"Harp"
-  shortInstrumentName = #"Hp."
+  \harpStaffSettings
 } {
   \context Voice = "harp" { \clef treble << \global \harpPart >> }
 }
 
 pianoStaff = \new Staff \with {
-  midiInstrument = #"acoustic grand"
-  midiMinimumVolume = #0.7
-  midiMaximumVolume = #0.9
-  midiBalance = #0.0
-  instrumentName = #"Piano"
-  shortInstrumentName = #"Pno."
+  \pianoStaffSettings
 } {
   \context Voice = "piano" { \clef treble << \global \pianoPart >> }
 }
 
 guitarLayoutStaff = \new Staff \with {
-  instrumentName = #"Guitar"
-  shortInstrumentName = #"Gt."
+  \guitarLayoutStaffSettings
 } {
   \context Voice = "guitar" { << \global \guitarLayoutPart >> }
 }
 guitarMidiStaff = \new Staff \with {
-  midiInstrument = #"acoustic guitar (nylon)"
-  midiMinimumVolume = #0.2
-  midiMaximumVolume = #0.5
+  \guitarMidiStaffSettings
 } {
   \context Voice = "guitar" { << \global \guitarMidiPart >> }
 }
 
 voiceStaff = \new Staff \with {
-  instrumentName = #"Voice"
-  midiMinimumVolume = #0.3
-  midiMaximumVolume = #0.5
-  midiBalance = #0.0
-  shortInstrumentName = #"Vo."
-  midiInstrument = #"voice oohs"
+  \voiceStaffSettings
 } {
   \new Voice = "vocalTrack" { \global \voicePart }
 }
 
 violinStaff = \new Staff \with {
-  midiInstrument = #"violin"
-  midiMinimumVolume = #0.4
-  midiMaximumVolume = #0.6
-  midiBalance = #-0.4
-  instrumentName = #"Violin"
-  shortInstrumentName = #"Vln."
+  \violinStaffSettings
 } {
   \context Voice = "violin" { << \global \violinPart >> }
 }
 
 celloStaff = \new Staff \with {
-  midiInstrument = #"cello"
-  midiMinimumVolume = #0.3
-  midiMaximumVolume = #0.5
-  midiBalance = #0.4
-  instrumentName = #"Cello"
-  shortInstrumentName = #"Vc."
+  \celloStaffSettings
 } {
   \context Voice = "cello" << \global \celloPart >>
 }

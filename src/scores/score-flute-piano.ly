@@ -20,25 +20,15 @@ pianoPart = \relative c' {
 \score {
   <<
     \new Staff \with {
-      midiInstrument = #"flute"
-      midiMinimumVolume = #0.7
-      midiMaximumVolume = #0.9
-      midiBalance = #0.0
-      instrumentName = #"Flute"
-      shortInstrumentName = #"Fl."
+      \fluteStaffSettings
     } {
       \context Voice = "flute" { << \global \flutePart >> }
     }
 
     \new Staff \with {
-      midiInstrument = #"acoustic grand"
-      midiMinimumVolume = #0.7
-      midiMaximumVolume = #0.9
-      midiBalance = #0.0
-      instrumentName = #"Piano"
-      shortInstrumentName = #"Pi."
+      \pianoStaffSettings
     } {
-      \context Voice = "paino" { << \global \pianoPart >> }
+      \context Voice = "piano" { << \global \pianoPart >> }
     }
   >>
   \layout { }

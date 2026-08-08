@@ -11,3 +11,12 @@ pianoMelody = \relative c'' {
   cis1
   %cis8 a'4 cis,8 a'4 cis,4 |
 }
+
+pianoStaffSettings = \with {
+  midiInstrument = #"acoustic grand"
+  midiMinimumVolume = #0.7
+  midiMaximumVolume = #0.9
+  midiBalance = #0.0
+  instrumentName = #"Piano"
+  shortInstrumentName = #"Pno."
+}

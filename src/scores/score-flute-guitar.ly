@@ -5,37 +5,31 @@
 
 flutePart = \relative c' {
   \flutePickup
-  \fluteRepeatMelody
   \fluteOutroMelody
   \bar "|."
 }
 
 fluteStaff = \new Staff \with {
-  midiInstrument = #"flute"
-  midiMinimumVolume = #0.7
-  midiMaximumVolume = #0.9
-  midiBalance = #0.0
-  instrumentName = #"Flute"
-  shortInstrumentName = #"Fl."
+  \fluteStaffSettings
 } {
   \context Voice = "flute" { << \global \flutePart >> }
 }
 
 guitarLayoutChords = {
   \partial 4 r4
-  \repeat unfold 2 { \guitarChords }
+  \guitarChords
 }
 
 guitarLayoutPart = {
   \clef "treble_8"
   \partial 4 r4
-  \repeat unfold 2 { \guitarMelody }
+  \guitarMelody
   \bar "|."
 }
 
 guitarMidiPart = {
   \partial 4 r4
-  \repeat unfold 2 { \guitarMidiPattern }
+  \guitarMidiPattern
 }
 
 % LAYOUT SCORE
@@ -49,7 +43,9 @@ guitarMidiPart = {
       \guitarLayoutChords
     }
 
-    \new Staff \with { } {
+    \new Staff \with {
+      \guitarLayoutStaffSettings
+     } {
       \global
       \guitarLayoutPart
     }
@@ -64,9 +60,7 @@ guitarMidiPart = {
   <<
     \fluteStaff
     \new Staff \with {
-      midiInstrument = #"acoustic guitar (nylon)"
-      midiMinimumVolume = #0.2
-      midiMaximumVolume = #0.5
+      \guitarMidiStaffSettings
     } {
       \global
       \guitarMidiPart

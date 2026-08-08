@@ -19,16 +19,12 @@ celloPart = \relative c' {
 \score {
   <<
     \new Staff \with {
-      midiInstrument = #"flute"
-      instrumentName = #"Flute"
-      shortInstrumentName = #"Fl."
+      \fluteStaffSettings
     } {
       \context Voice = "flute" { << \global \flutePart >> }
     }
     \new Staff \with {
-      midiInstrument = #"cello"
-      instrumentName = #"Cello"
-      shortInstrumentName = #"Vc."
+      \celloStaffSettings
     } {
       \context Voice = "cello" { << \global \celloPart >> }
     }
