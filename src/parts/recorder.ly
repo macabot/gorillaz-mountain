@@ -18,3 +18,12 @@ recorderMelody = \relative c' {
   \recorderFirstHalfMelody
   \recorderSecondHalfMelody
 }
+
+recorderStaffSettings = \with {
+  midiInstrument = #"recorder"
+  midiMinimumVolume = #0.5
+  midiMaximumVolume = #0.8
+  midiBalance = #0.1
+  instrumentName = #"Blokfluit"
+  shortInstrumentName = #"Bl."
+}

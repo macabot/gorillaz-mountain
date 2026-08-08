@@ -27,3 +27,12 @@ fluteOutroMelody = {
   \fluteSharedMelody
   \relative c' { a'4 fis8 e8 d2 }
 }
+
+fluteStaffSettings = \with {
+  midiInstrument = #"flute"
+  midiMinimumVolume = #0.7
+  midiMaximumVolume = #0.9
+  midiBalance = #0.0
+  instrumentName = #"Dwarsfluit"
+  shortInstrumentName = #"Fl."
+}

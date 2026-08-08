@@ -11,3 +11,11 @@ shakerHalfRhythm = \drummode {
     mar4 r4 mar4 r4
   }
 }
+
+shakerStaffSettings = \with {
+  \override StaffSymbol.line-count = #1
+  % Do not set the midiInstrument when using \drummode.
+  midiBalance = #0.4
+  instrumentName = #"Shaker"
+  shortInstrumentName = #"Shk."
+}

@@ -76,3 +76,14 @@ guitarMidiPattern = {
   \gmDownAcc\sustainOff\sustainOn \gmDown \gmDown \gmDown
   \dDownAccH\sustainOff |
 }
+
+guitarLayoutStaffSettings = \with {
+  instrumentName = #"Gitaar"
+  shortInstrumentName = #"Git."
+}
+
+guitarMidiStaffSettings = \with {
+  midiInstrument = #"acoustic guitar (nylon)"
+  midiMinimumVolume = #0.2
+  midiMaximumVolume = #0.5
+}

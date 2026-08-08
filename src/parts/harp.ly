@@ -1,7 +1,7 @@
 \version "2.24.3"
 
 harpInstructionPickup = {
-  \partial 4 r4^\markup \italic "Weave tin foil between strings"
+  \partial 4 r4^\markup \italic "Weef aluminiumfolie tussen snaren"
 }
 
 harpLeadIn = \relative c' {
@@ -52,4 +52,14 @@ harpSecondHalfOutroMelody = {
 harpOutroMelody = {
   \harpSharedMelody
   \harpOutro
+}
+
+harpStaffSettings = \with {
+  % Harp with tin foil sounds like a sitar.
+  midiInstrument = #"sitar"
+  midiMinimumVolume = #0.3
+  midiMaximumVolume = #0.6
+  midiBalance = #0.5
+  instrumentName = #"Harp"
+  shortInstrumentName = #"Hp."
 }

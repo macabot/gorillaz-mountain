@@ -11,7 +11,7 @@ flutePart = \relative c' {
 
 \score {
   \new Staff \with {
-    midiInstrument = #"flute"
+    \fluteStaffSettings
   } {
     \context Voice = "flute" { << \global \flutePart >> }
   }
