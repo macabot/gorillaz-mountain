@@ -18,3 +18,12 @@ violinMelody = \relative c' {
   \violinFirstHalfMelody
   \violinSecondHalfMelody
 }
+
+violinStaffSettings = \with {
+  midiInstrument = #"violin"
+  midiMinimumVolume = #0.4
+  midiMaximumVolume = #0.6
+  midiBalance = #-0.4
+  instrumentName = #"Viool"
+  shortInstrumentName = #"Vl."
+}

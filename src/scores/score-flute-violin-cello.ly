@@ -26,32 +26,17 @@ celloPart = \relative c' {
 \score {
   <<
     \new Staff \with {
-      midiInstrument = #"flute"
-      midiMinimumVolume = #0.7
-      midiMaximumVolume = #0.9
-      midiBalance = #0.0
-      instrumentName = #"Flute"
-      shortInstrumentName = #"Fl."
+      \fluteStaffSettings
     } {
       \context Voice = "flute" { << \global \flutePart >> }
     }
     \new Staff \with {
-      midiInstrument = #"violin"
-      midiMinimumVolume = #0.4
-      midiMaximumVolume = #0.6
-      midiBalance = #-0.4
-      instrumentName = #"Violin"
-      shortInstrumentName = #"Vln."
+      \violinStaffSettings
     } {
       \context Voice = "violin" { << \global \violinPart >> }
     }
     \new Staff \with {
-      midiInstrument = #"cello"
-      midiMinimumVolume = #0.7
-      midiMaximumVolume = #0.9
-      midiBalance = #0.4
-      instrumentName = #"Cello"
-      shortInstrumentName = #"Vc."
+      \celloStaffSettings
     } {
       \context Voice = "cello" << \global \celloPart >>
     }

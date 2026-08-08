@@ -19,23 +19,13 @@ voicePart = {
 \score {
   <<
     \new Staff \with {
-      midiInstrument = #"flute"
-      midiMinimumVolume = #0.7
-      midiMaximumVolume = #0.9
-      midiBalance = #0.0
-      instrumentName = #"Flute"
-      shortInstrumentName = #"Fl."
+      \fluteStaffSettings
     } {
       \context Voice = "flute" { << \global \flutePart >> }
     }
 
     \new Staff \with {
-      midiInstrument = #"voice oohs"
-      midiMinimumVolume = #0.3
-      midiMaximumVolume = #0.5
-      midiBalance = #0.0
-      instrumentName = #"Voice"
-      shortInstrumentName = #"Vo."
+      \voiceStaffSettings
     } {
       \new Voice = "vocalTrack" { \global \voicePart }
     }

@@ -53,3 +53,13 @@ harpOutroMelody = {
   \harpSharedMelody
   \harpOutro
 }
+
+harpStaffSettings = \with {
+  % Harp with tin foil sounds like a sitar.
+  midiInstrument = #"sitar"
+  midiMinimumVolume = #0.3
+  midiMaximumVolume = #0.6
+  midiBalance = #0.5
+  instrumentName = #"Harp"
+  shortInstrumentName = #"Hp."
+}

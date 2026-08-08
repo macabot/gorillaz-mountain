@@ -9,10 +9,10 @@ date = 2026-08-04
 Hier vind je het volledige arrangement:
 
 <audio controls>
-  <source src="../dist/mp3/score-all.mp3" type="audio/mpeg">
+  <source src="../dist/mp3/macabot-gorillaz-mountain-arrangement.mp3" type="audio/mpeg">
 Je browser kan het audiobestand niet afspelen.
 </audio>
 
-[Download als PDF](../dist/pdf/score-all.pdf)
+[Download als PDF](../dist/pdf/macabot-gorillaz-mountain-arrangement.pdf)
 
-![Arrangement bladmuziek Gorillaz - The Mountain](../dist/svg/score-all.svg)
+![Arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-arrangement.svg)

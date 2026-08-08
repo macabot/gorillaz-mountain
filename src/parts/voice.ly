@@ -21,3 +21,12 @@ voiceLyrics = \lyricmode {
   aah |
   aah aah |
 }
+
+voiceStaffSettings = \with {
+  midiInstrument = #"voice oohs"
+  midiMinimumVolume = #0.3
+  midiMaximumVolume = #0.5
+  midiBalance = #0.0
+  instrumentName = #"Zang"
+  shortInstrumentName = #"Zg."
+}

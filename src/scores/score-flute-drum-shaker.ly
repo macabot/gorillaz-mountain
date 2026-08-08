@@ -25,36 +25,19 @@ shakerPart = {
 \score {
   <<
     \new Staff \with {
-      midiInstrument = #"flute"
-      midiMinimumVolume = #0.7
-      midiMaximumVolume = #0.9
-      midiBalance = #0.0
-      instrumentName = #"Flute"
-      shortInstrumentName = #"Fl."
+      \fluteStaffSettings
     } {
       \context Voice = "flute" { << \global \flutePart >> }
     }
 
     \new DrumStaff \with {
-      \override StaffSymbol.line-count = #1
-      % Do not set the midiInstrument when using \drummode.
-      %midiMinimumVolume = #0.3
-      %midiMaximumVolume = #0.6
-      midiBalance = #-0.3
-      instrumentName = #"Drum"
-      shortInstrumentName = #"Dr."
+      \drumStaffSettings
     } {
       \context DrumVoice = "percussion" { << \global \drumPart >> }
     }
 
     \new DrumStaff \with {
-      \override StaffSymbol.line-count = #1
-      % Do not set the midiInstrument when using \drummode.
-      %midiMinimumVolume = #0.2
-      %midiMaximumVolume = #0.4
-      midiBalance = #0.4
-      instrumentName = #"Shaker"
-      shortInstrumentName = #"Shk."
+      \shakerStaffSettings
     } {
       \context DrumVoice = "shaker" { << \global \shakerPart >> }
     }

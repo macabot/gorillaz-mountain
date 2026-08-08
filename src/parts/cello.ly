@@ -18,3 +18,12 @@ celloMelody = \relative c, {
   \celloFirstHalfMelody
   \celloSecondHalfMelody
 }
+
+celloStaffSettings = \with {
+  midiInstrument = #"cello"
+  midiMinimumVolume = #0.3
+  midiMaximumVolume = #0.5
+  midiBalance = #0.4
+  instrumentName = #"Cello"
+  shortInstrumentName = #"Vc."
+}

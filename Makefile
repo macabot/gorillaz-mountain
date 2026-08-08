@@ -15,17 +15,52 @@ PREFIX := macabot-gorillaz-mountain
 # SoundFont Location
 SOUNDFONT ?= $(HOME)/TimbresOfHeaven/TimbresOfHeaven4.00.sf2
 
+# Translation Mapping (Single Words)
+DUTCH_flute       := dwarsfluit
+DUTCH_recorder    := blokfluit
+DUTCH_drum        := trommel
+DUTCH_shaker      := shaker
+DUTCH_harp        := harp
+DUTCH_piano       := piano
+DUTCH_guitar      := gitaar
+DUTCH_voice       := zang
+DUTCH_violin      := viool
+DUTCH_cello       := cello
+DUTCH_all         := arrangement
+
+ENG_dwarsfluit  := flute
+ENG_blokfluit   := recorder
+ENG_trommel     := drum
+ENG_shaker      := shaker
+ENG_harp        := harp
+ENG_piano       := piano
+ENG_gitaar      := guitar
+ENG_zang        := voice
+ENG_viool       := violin
+ENG_cello       := cello
+ENG_arrangement := all
+
+empty :=
+space := $(empty) $(empty)
+
+# Functions to translate hyphen-separated stems (e.g. flute-cello -> dwarsfluit-cello)
+translate_word = $(or $(DUTCH_$(1)),$(1))
+reverse_word   = $(or $(ENG_$(1)),$(1))
+
+to_dutch = $(subst $(space),-,$(strip $(foreach w,$(subst -, ,$(1)),$(call translate_word,$(w)))))
+get_eng  = $(subst $(space),-,$(strip $(foreach w,$(subst -, ,$(1)),$(call reverse_word,$(w)))))
+
 # Find score files
 SCORES         := $(wildcard $(SCORES_DIR)/score-*.ly)
 RAW_BASENAMES  := $(notdir $(basename $(SCORES)))
 PART_NAMES     := $(patsubst score-%,%,$(RAW_BASENAMES))
 
 # Target names with prefix
-PREFIXED_BASENAMES := $(patsubst %,$(PREFIX)-%,$(PART_NAMES))
+PREFIXED_BASENAMES := $(foreach p,$(PART_NAMES),$(PREFIX)-$(call to_dutch,$(p)))
 
 # Find all Mermaid diagram files
 DIAGRAMS        := $(wildcard $(SRC_DIR)/diagrams/*.mmd)
-TARGET_DIAGRAMS := $(patsubst $(SRC_DIR)/diagrams/%.mmd, $(DIST_SVG_DIR)/%.svg, $(DIAGRAMS))
+TARGET_DIAGRAMS := $(patsubst $(SRC_DIR)/diagrams/%.mmd, $(DIST_SVG_DIR)/$(PREFIX)-%.svg, $(DIAGRAMS))
 
 # Target Files
 TARGET_PDFS := $(patsubst %, $(DIST_PDF_DIR)/%.pdf, $(PREFIXED_BASENAMES))
@@ -35,7 +70,7 @@ TARGET_MP3S := $(patsubst %, $(DIST_MP3_DIR)/%.mp3, $(PREFIXED_BASENAMES))
 # Function: Parse dependencies dynamically
 define get_deps
 $(SRC_DIR)/global.ly \
-$(if $(filter score-all,$(1)),\
+$(if $(filter score-all score-arrangement,$(1)),\
     $(wildcard $(PARTS_DIR)/*.ly),\
     $(patsubst %,$(PARTS_DIR)/%.ly,$(subst -, ,$(patsubst score-%,%,$(1))))\
 )
@@ -59,26 +94,26 @@ $(BUILD_DIR) $(DIST_PDF_DIR) $(DIST_SVG_DIR) $(DIST_MP3_DIR):
 .SECONDEXPANSION:
 
 # Compile PDF & MIDI
-$(DIST_PDF_DIR)/$(PREFIX)-%.pdf $(BUILD_DIR)/$(PREFIX)-%.midi: $(SCORES_DIR)/score-%.ly $$(call get_deps,score-%) | $(BUILD_DIR) $(DIST_PDF_DIR)
+$(DIST_PDF_DIR)/$(PREFIX)-%.pdf $(BUILD_DIR)/$(PREFIX)-%.midi: $(SCORES_DIR)/score-$$(call get_eng,%).ly $$(call get_deps,score-$$(call get_eng,%)) | $(BUILD_DIR) $(DIST_PDF_DIR)
 	@echo "=== Compiling PDF & MIDI: $< ==="
 	lilypond -o $(BUILD_DIR)/$(PREFIX)-$* $<
 	@mv $(BUILD_DIR)/$(PREFIX)-$*.pdf $(DIST_PDF_DIR)/$(PREFIX)-$*.pdf
 
 # Compile SVG (Single Continuous SVG for Web)
-$(DIST_SVG_DIR)/$(PREFIX)-%.svg: $(SCORES_DIR)/score-%.ly $$(call get_deps,score-%) | $(BUILD_DIR) $(DIST_SVG_DIR)
+$(DIST_SVG_DIR)/$(PREFIX)-%.svg: $(SCORES_DIR)/score-$$(call get_eng,%).ly $$(call get_deps,score-$$(call get_eng,%)) | $(BUILD_DIR) $(DIST_SVG_DIR)
 	@echo "=== Compiling SVG: $< ==="
 	lilypond -dbackend=svg -dcrop -o $(BUILD_DIR)/$(PREFIX)-$* $<
 	@mv $(BUILD_DIR)/$(PREFIX)-$*.cropped.svg $@
 
 # Synthesize MP3 from MIDI
-$(DIST_MP3_DIR)/$(PREFIX)-%.mp3: $(BUILD_DIR)/$(PREFIX)-%.midi | $(BUILD_DIR) $(DIST_MP3_DIR)
+$(DIST_MP3_DIR)/%.mp3: $(BUILD_DIR)/%.midi | $(BUILD_DIR) $(DIST_MP3_DIR)
 	@echo "=== Synthesizing MP3: $@ ==="
-	fluidsynth -ni $(SOUNDFONT) $< -F $(BUILD_DIR)/$(PREFIX)-$*_temp.wav -r 44100
-	ffmpeg -y -i $(BUILD_DIR)/$(PREFIX)-$*_temp.wav -b:a 192k $@
-	@rm -f $(BUILD_DIR)/$(PREFIX)-$*_temp.wav
+	fluidsynth -ni $(SOUNDFONT) $< -F $(BUILD_DIR)/$*_temp.wav -r 44100
+	ffmpeg -y -i $(BUILD_DIR)/$*_temp.wav -b:a 192k $@
+	@rm -f $(BUILD_DIR)/$*_temp.wav
 
 # Compile Mermaid Diagrams to SVG via Docker
-$(DIST_SVG_DIR)/%.svg: $(SRC_DIR)/diagrams/%.mmd | $(DIST_SVG_DIR)
+$(DIST_SVG_DIR)/$(PREFIX)-%.svg: $(SRC_DIR)/diagrams/%.mmd | $(DIST_SVG_DIR)
 	@echo "=== Compiling Mermaid Diagram (via Docker): $< ==="
 	docker run --rm -u $(shell id -u):$(shell id -g) -v $(CURDIR):/data minlag/mermaid-cli -i /data/$< -o /data/$@ -b transparent
 
