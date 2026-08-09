@@ -4,6 +4,10 @@ harpInstructionPickup = {
   \partial 4 r4^\markup \italic "Weef aluminiumfolie tussen snaren"
 }
 
+harpPickup = \relative c' {
+  fis8^\markup \italic "Weef aluminiumfolie tussen snaren" a8
+}
+
 harpLeadIn = \relative c' {
   r4 r4 r4 fis8 a8
 }

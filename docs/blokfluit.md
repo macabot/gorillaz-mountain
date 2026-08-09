@@ -20,7 +20,6 @@ Je browser kan het audiobestand niet afspelen.
 ## Blokfluit onder begeleiding
 
 De blokfluit wordt begeleid, eerst door de dwarsfluit en daarna door de harp.
-In het bladmuziek hieronder wordt 2 keer de melodie van de blokfluit gespeeld.
 
 ### Blokfluit en dwarsfluit
 
@@ -33,7 +32,7 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Dwarsfluit en blokfluit arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-dwarsfluit-blokfluit.svg)
 
-## Blokfluit en harp
+### Blokfluit en harp
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-blokfluit-harp.mp3" type="audio/mpeg">
@@ -43,3 +42,9 @@ Je browser kan het audiobestand niet afspelen.
 [Download als PDF](../dist/pdf/macabot-gorillaz-mountain-blokfluit-harp.pdf)
 
 ![Blokfluit en harp arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-blokfluit-harp.svg)
+
+## Overzicht
+
+De blokfluit start nadat de dwarsfluit 1 keer haar melodie gespeeld heeft. Hierna speelt de blokfluit haar melodie dan 3 keer en dan 1 keer niet. Daarna speelt het de eerste 4 maten van de melody, gevolgd door 4 maten rust. Ten slotte, speelt de blokfluit de melody samen met alle andere partijen.
+
+![Overzicht dwarsfluit, blokfluit en harp](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit-blokfluit-harp.svg)

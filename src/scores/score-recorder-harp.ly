@@ -4,14 +4,13 @@
 \include "../parts/harp.ly"
 
 recorderPart = \relative c' {
-  R1*5
+  \partial 4 r4
   \recorderMelody
   \bar "|."
 }
 
 harpPart = {
-  \harpSecondHalfLeadIn
-  \harpSecondHalfRepeatMelody
+  \harpPickup
   \harpOutroMelody
   \bar "|."
 }
