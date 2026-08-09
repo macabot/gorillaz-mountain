@@ -21,7 +21,7 @@ Je browser kan het audiobestand niet afspelen.
 
 De blokfluit wordt begeleid, eerst door de dwarsfluit en daarna door de harp.
 
-### Blokfluit en dwarsfluit
+### Dwarsfluit en blokfluit
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-dwarsfluit-blokfluit.mp3" type="audio/mpeg">
@@ -32,7 +32,7 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Dwarsfluit en blokfluit arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-dwarsfluit-blokfluit.svg)
 
-### Blokfluit en harp
+### Harp en blokfluit
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-blokfluit-harp.mp3" type="audio/mpeg">

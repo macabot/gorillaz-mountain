@@ -1,12 +1,12 @@
 \version "2.24.3"
 \include "../global.ly"
-\include "../parts/flute.ly"
+\include "../parts/harp.ly"
 \include "../parts/violin.ly"
 \include "../parts/cello.ly"
 
-flutePart = \relative c' {
-  \flutePickup
-  \fluteOutroMelody
+harpPart = \relative c' {
+  \harpPickup
+  \harpOutroMelody
   \bar "|."
 }
 
@@ -26,9 +26,9 @@ celloPart = \relative c' {
 \score {
   <<
     \new Staff \with {
-      \fluteStaffSettings
+      \harpStaffSettings
     } {
-      \context Voice = "flute" { << \global \flutePart >> }
+      \context Voice = "harp" { << \global \harpPart >> }
     }
     \new Staff \with {
       \violinStaffSettings
