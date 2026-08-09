@@ -4,14 +4,12 @@
 \include "../parts/cello.ly"
 
 violinPart = \relative c' {
-  \partial 4 r4
   \violinMelody
   \bar "|."
 }
 
 celloPart = \relative c' {
   \clef bass
-  \partial 4 r4
   \celloMelody
   \bar "|."
 }
