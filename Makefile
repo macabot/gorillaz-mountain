@@ -58,9 +58,10 @@ PART_NAMES     := $(patsubst score-%,%,$(RAW_BASENAMES))
 # Target names with prefix
 PREFIXED_BASENAMES := $(foreach p,$(PART_NAMES),$(PREFIX)-$(call to_dutch,$(p)))
 
-# Find all Mermaid diagram files
-DIAGRAMS        := $(wildcard $(SRC_DIR)/diagrams/*.mmd)
-TARGET_DIAGRAMS := $(patsubst $(SRC_DIR)/diagrams/%.mmd, $(DIST_SVG_DIR)/$(PREFIX)-%.svg, $(DIAGRAMS))
+# Find all Mermaid diagram files and translate target names
+DIAGRAMS             := $(wildcard $(SRC_DIR)/diagrams/*.mmd)
+RAW_DIAGRAM_NAMES    := $(notdir $(basename $(DIAGRAMS)))
+TARGET_DIAGRAMS      := $(foreach d,$(RAW_DIAGRAM_NAMES),$(DIST_SVG_DIR)/$(PREFIX)-$(call to_dutch,$(d)).svg)
 
 # Target Files
 TARGET_PDFS := $(patsubst %, $(DIST_PDF_DIR)/%.pdf, $(PREFIXED_BASENAMES))
@@ -113,7 +114,7 @@ $(DIST_MP3_DIR)/%.mp3: $(BUILD_DIR)/%.midi | $(BUILD_DIR) $(DIST_MP3_DIR)
 	@rm -f $(BUILD_DIR)/$*_temp.wav
 
 # Compile Mermaid Diagrams to SVG via Docker
-$(DIST_SVG_DIR)/$(PREFIX)-%.svg: $(SRC_DIR)/diagrams/%.mmd | $(DIST_SVG_DIR)
+$(DIST_SVG_DIR)/$(PREFIX)-%.svg: $(SRC_DIR)/diagrams/$$(call get_eng,%).mmd | $(DIST_SVG_DIR)
 	@echo "=== Compiling Mermaid Diagram (via Docker): $< ==="
 	docker run --rm -u $(shell id -u):$(shell id -g) -v $(CURDIR):/data minlag/mermaid-cli -i /data/$< -o /data/$@ -b transparent
 

@@ -18,14 +18,32 @@ fluteSharedMelody = \relative c' {
   g4 d8 e8 g4 d8 e8 |
 }
 
+fluteRepeatEnd = \relative c' {
+  a'4 fis8 e8 d4 fis8 a8 |
+}
+
+fluteOutroEnd = \relative c' {
+  a'4 fis8 e8 d2 |
+}
+
 fluteRepeatMelody  = {
   \fluteSharedMelody
-  \relative c' { a'4 fis8 e8 d4 fis8 a8 }
+  \fluteRepeatEnd
 }
 
 fluteOutroMelody = {
   \fluteSharedMelody
-  \relative c' { a'4 fis8 e8 d2 }
+  \fluteOutroEnd
+}
+
+fluteVoltaMelody = {
+  \repeat volta 2 {
+    \fluteSharedMelody
+  }
+  \alternative {
+    { \fluteRepeatEnd }
+    { \fluteOutroEnd }
+  }
 }
 
 fluteStaffSettings = \with {

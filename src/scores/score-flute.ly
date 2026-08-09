@@ -4,8 +4,7 @@
 
 flutePart = \relative c' {
   \flutePickup
-  \fluteRepeatMelody
-  \fluteOutroMelody
+  \fluteVoltaMelody
   \bar "|."
 }
 
