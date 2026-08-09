@@ -45,6 +45,6 @@ Je browser kan het audiobestand niet afspelen.
 
 ## Overzicht
 
-De blokfluit start nadat de dwarsfluit 1 keer haar melodie gespeeld heeft. Hierna speelt de blokfluit haar melodie dan 3 keer en dan 1 keer niet. Daarna speelt het de eerste 4 maten van de melody, gevolgd door 4 maten rust. Ten slotte, speelt de blokfluit de melody samen met alle andere partijen.
+De blokfluit start nadat de dwarsfluit 1 keer haar melodie gespeeld heeft. Hierna speelt de blokfluit haar melodie dan 3 keer en dan 1 keer niet. Daarna speelt het de eerste 4 maten van de melody, gevolgd door 4 maten rust. Ten slotte speelt de blokfluit de melody samen met alle andere partijen.
 
 ![Overzicht dwarsfluit, blokfluit en harp](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit-blokfluit-harp.svg)
