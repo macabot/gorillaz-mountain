@@ -26,6 +26,7 @@ Hieronder vind je de pagina's naar de bladmuziek van zowel het volledige arrange
   - [Piano](piano)
   - [Gitaar](gitaar)
   - [Zang](zang)
+  - [Viool](viool)
   - [Cello](cello)
 - Groepjes
   - [Dwarsfluit en blokfluit](dwarsfluit-blokfluit)

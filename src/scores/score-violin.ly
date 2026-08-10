@@ -4,7 +4,6 @@
 \include "../parts/cello.ly"
 
 violinPart = \relative c' {
-  \partial 4 r4
   \violinMelody
   \bar "|."
 }
