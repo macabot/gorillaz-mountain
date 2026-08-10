@@ -56,7 +56,7 @@ Je browser kan het audiobestand niet afspelen.
 
 ## Overzicht
 
-De cello speelt 4 keer haar melody en dan 1 keer niet. Vervolgens speelt het de eerste 4 maten van haar melody, gevolgd door 4 maten rust.
-Ten slotte speelt de cello haar melody samen met alle andere partijen.
+De cello speelt 4 keer haar melodie en dan 1 keer niet. Vervolgens speelt het de eerste 4 maten van haar melodie, gevolgd door 4 maten rust.
+Ten slotte speelt de cello haar melodie samen met alle andere partijen.
 
 ![Overzicht dwarsfluit, harp, viool en cello](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit-harp-viool-cello.svg)

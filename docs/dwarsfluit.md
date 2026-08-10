@@ -21,7 +21,7 @@ Je browser kan het audiobestand niet afspelen.
 
 ## Overzicht
 
-De dwarsfluit speelt 2 keer de melody, 2 keer niet en dan 3 keer tot het einde.
+De dwarsfluit speelt 2 keer de melodie, 2 keer niet en dan 3 keer tot het einde.
 
 ![Overzicht dwarsfluit](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit.svg)
 
