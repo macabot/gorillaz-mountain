@@ -22,6 +22,7 @@ Hieronder vind je de pagina's naar de bladmuziek van zowel het volledige arrange
   - [Dwarsfluit](dwarsfluit)
   - [Blokfluit](blokfluit)
   - [Trommel](trommel)
+  - [Shaker](shaker)
   - [Piano](piano)
   - [Gitaar](gitaar)
   - [Zang](zang)

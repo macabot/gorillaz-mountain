@@ -3,7 +3,6 @@
 \include "../parts/shaker.ly"
 
 shakerPart = {
-  \partial 4 r4
   \shakerRhythm
   \bar "|."
 }
