@@ -24,13 +24,3 @@ Je browser kan het audiobestand niet afspelen.
 De dwarsfluit speelt 2 keer de melodie, 2 keer niet en dan 3 keer tot het einde.
 
 ![Overzicht dwarsfluit](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit.svg)
-
-## Gerelateerd
-
-- [Dwarsfluit en blokfluit](../blokfluit/#blokfluit-en-dwarsfluit)
-- [Dwarsfluit en cello](../dwarsfluit-cello)
-- [Dwarsfluit en gitaar](../dwarsfluit-gitaar)
-- [Dwarsfluit en piano](../dwarsfluit-piano)
-- [Dwarsfluit, trommel en shaker](../dwarsfluit-trommel-shaker)
-- [Dwarsfluit, viool en cello](../dwarsfluit-viool-cello)
-- [Dwarsfluit en zang](../dwarsfluit-zang)

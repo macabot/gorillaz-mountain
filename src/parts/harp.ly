@@ -16,6 +16,10 @@ harpSecondHalfLeadIn = \relative c' {
   r4 r4 r4 d8 fis8
 }
 
+harpInstructionSecondHalfLeadIn = \relative c' {
+  r4^\markup \italic "Weef aluminiumfolie tussen snaren" r4 r4 d8 fis8
+}
+
 harpSecondHalfSharedMelody = \relative c' {
   a'4 d,8 fis8 a4 d,8 fis8 |
   a8 \acciaccatura g8 a8 g8 fis8 e4 d8 e8 |
@@ -56,6 +60,16 @@ harpSecondHalfOutroMelody = {
 harpOutroMelody = {
   \harpSharedMelody
   \harpOutro
+}
+
+harpVoltaMelody = {
+  \repeat volta 2 {
+    \harpSharedMelody
+  }
+  \alternative {
+    { \harpRepeat }
+    { \harpOutro }
+  }
 }
 
 harpStaffSettings = \with {

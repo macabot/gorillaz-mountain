@@ -3,9 +3,9 @@
 \include "../parts/harp.ly"
 
 harpPart = {
-  \harpSecondHalfLeadIn
+  \harpInstructionSecondHalfLeadIn
   \harpSecondHalfRepeatMelody
-  \harpOutroMelody
+  \harpVoltaMelody
   \bar "|."
 }
 

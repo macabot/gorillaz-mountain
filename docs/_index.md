@@ -23,18 +23,11 @@ Hieronder vind je de pagina's naar de bladmuziek van zowel het volledige arrange
   - [Blokfluit](blokfluit)
   - [Trommel](trommel)
   - [Shaker](shaker)
+  - [Harp](harp)
   - [Piano](piano)
   - [Gitaar](gitaar)
   - [Zang](zang)
   - [Viool](viool)
   - [Cello](cello)
-- Groepjes
-  - [Dwarsfluit en blokfluit](dwarsfluit-blokfluit)
-  - [Dwarsfluit en cello](dwarsfluit-cello)
-  - [Dwarsfluit en gitaar](dwarsfluit-gitaar)
-  - [Dwarsfluit en piano](dwarsfluit-piano)
-  - [Dwarsfluit, trommel en shaker](dwarsfluit-trommel-shaker)
-  - [Dwarsfluit, viool en cello](dwarsfluit-viool-cello)
-  - [Dwarsfluit en zang](dwarsfluit-zang)
 
 Op elke pagina kan je de bladmuziek downloaded. Ook vind je een opname van hoe het ongeveer klinkt. De opnames zijn met de computer gemaakt. In het echt zal het nog mooier klinken.
