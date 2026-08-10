@@ -23,6 +23,7 @@ Hieronder vind je de pagina's naar de bladmuziek van zowel het volledige arrange
   - [Blokfluit](blokfluit)
   - [Piano](piano)
   - [Gitaar](gitaar)
+  - [Zang](zang)
   - [Cello](cello)
 - Groepjes
   - [Dwarsfluit en blokfluit](dwarsfluit-blokfluit)

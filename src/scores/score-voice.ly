@@ -4,8 +4,7 @@
 
 voicePart = {
   \clef "treble_8"
-  \partial 4 r4
-  \repeat unfold 2 { \voiceMelody }
+  \voiceMelody
 }
 
 \score {
