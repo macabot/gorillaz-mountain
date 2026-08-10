@@ -21,6 +21,7 @@ Hieronder vind je de pagina's naar de bladmuziek van zowel het volledige arrange
 - Instrumenten
   - [Dwarsfluit](dwarsfluit)
   - [Blokfluit](blokfluit)
+  - [Gitaar](gitaar)
   - [Cello](cello)
 - Groepjes
   - [Dwarsfluit en blokfluit](dwarsfluit-blokfluit)
