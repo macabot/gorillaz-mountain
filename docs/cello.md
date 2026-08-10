@@ -17,7 +17,7 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Cello arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-cello.svg)
 
-## Samenspel
+## Cello onder begeleiding
 
 De cello wordt begeleid door de dwarsfluit en harp. Het vormt samen met de viool de harmonie van het arrangement.
 

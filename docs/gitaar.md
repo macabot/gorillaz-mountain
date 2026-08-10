@@ -49,4 +49,4 @@ De gitaar start samen met de blokfluit nadat de dwarsfluit 1 keer haar melodie g
 Hierna speelt de gitaar haar melodie dan 3 keer en dan 2 keer niet.
 Ten slotte speelt de blokfluit de melodie samen met alle andere partijen.
 
-![Overzicht dwarsfluit, blokfluit harp en gitaar](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit-blokfluit-harp-gitaar.svg)
+![Overzicht dwarsfluit, blokfluit, harp en gitaar](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit-blokfluit-harp-gitaar.svg)

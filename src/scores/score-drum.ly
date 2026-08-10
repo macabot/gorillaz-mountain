@@ -3,7 +3,6 @@
 \include "../parts/drum.ly"
 
 drumPart = {
-  \partial 4 r4
   \drumRhythm
   \bar "|."
 }
