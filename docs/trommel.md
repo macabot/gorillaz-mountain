@@ -6,7 +6,7 @@ date = 2026-08-04
   render = 'always'
 +++
 
-Hier vind je het ritme (8 maten) van de trommel. Er zijn 2 trommels. De noten gemarkeerd met `>` worden met een hogere klank gespeeld. Alle andere noten met een lagere klank.
+Hier vind je het ritme (8 maten) van de trommel. Er zijn 2 trommels. De noten gemarkeerd met `>` worden op de trommel met de hoge klank gespeeld. Alle andere noten op de trommel met de lage klank.
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-trommel.mp3" type="audio/mpeg">
@@ -32,7 +32,7 @@ Je browser kan het audiobestand niet afspelen.
 
 ## Overzicht
 
-De trommel speelt 4 keer haar ritme en dan 2 keer niet.
-Ten slotte speelt de trommel haar ritme samen met alle andere partijen.
+De trommel speelt 4 keer het ritme, gevolgd door een rust van 2 x 8 maten.
+Ten slotte speelt de trommel het ritme samen met alle andere partijen (8 maten).
 
 ![Overzicht dwarsfluit, trommel, shaker en harp](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit-trommel-shaker-harp.svg)

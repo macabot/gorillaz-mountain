@@ -15,7 +15,7 @@ Ik heb een arrangement geschreven van [The Mountain door Gorillaz](https://youtu
 
 Hier zien we dat de dwarsfluit, trommel en cello samen beginnen. Vervolgens springen de blokfluit en gitaar bij. Daarna de harp, enzovoort.
 
-Hieronder vind je de pagina's naar de bladmuziek van zowel het volledige arrangement als voor individuele instrumenten en groepjes van instrumenten:
+Hieronder vind je de pagina's naar de bladmuziek van zowel het volledige arrangement als voor individuele instrumenten:
 
 - [Het volledige arrangement](arrangement)
 - Instrumenten
@@ -30,4 +30,4 @@ Hieronder vind je de pagina's naar de bladmuziek van zowel het volledige arrange
   - [Viool](viool)
   - [Cello](cello)
 
-Op elke pagina kan je de bladmuziek downloaded. Ook vind je een opname van hoe het ongeveer klinkt. De opnames zijn met de computer gemaakt. In het echt zal het nog mooier klinken.
+Op elke pagina kan je de bladmuziek downloaden. Ook vind je een opname van hoe het ongeveer klinkt. De opnames zijn met de computer gemaakt. In het echt zal het mooier klinken!

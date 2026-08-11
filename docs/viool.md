@@ -45,7 +45,7 @@ Je browser kan het audiobestand niet afspelen.
 
 ## Overzicht
 
-De viool start nadat de melodie 2 keer gespeeld is. Daarna speelt de viool haar melodie 2 keer en dan 1 keer niet. Vervolgens speelt ze de eerste 4 maten van haar melodie, gevolgd door 4 maten rust.
-Ten slotte speelt de viool haar melodie samen met alle andere partijen.
+De viool start nadat de melodie 2 keer gespeeld is door de dwarsfluit. Daarna speelt de viool de melodie 2 keer, gevolgd door 8 maten rust. Vervolgens speelt de viool de eerste 4 maten van de melodie, gevolgd door 4 maten rust.
+Ten slotte speelt de viool de melodie samen met alle andere partijen (8 maten).
 
 ![Overzicht dwarsfluit, harp, viool en cello](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit-harp-viool-cello.svg)

@@ -45,7 +45,8 @@ Je browser kan het audiobestand niet afspelen.
 
 ## Overzicht
 
-De gitaar start nadat de melodie 3 keer gespeeld is. Daarna speelt de piano 2 keer haar melodie en dan 1 keer niet.
-Ten slotte speelt de piano de melodie samen met alle andere partijen.
+De piano start nadat 3 x 8 maten aan melodie gespeeld zijn.
+Daarna speelt de piano 2 keer de melodie, gevolgd door 8 maten rust.
+Ten slotte speelt de piano de melodie samen met alle andere partijen (8 maten).
 
 ![Overzicht dwarsfluit, harp en piano](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit-harp-piano.svg)

@@ -6,7 +6,7 @@ date = 2026-08-04
   render = 'always'
 +++
 
-Hier vind je de melodie (8 maten) van de gitaar. Elke akkoord bestaat uit achtste slagen. Elke slag wordt van boven naar beneden gespeeld (van de laagste noot naar de hoogste noot).
+Hier vind je de melodie (8 maten) van de gitaar. Elk akkoord bestaat uit achtste slagen. Elke slag wordt van boven naar beneden gespeeld.
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-gitaar.mp3" type="audio/mpeg">
@@ -45,8 +45,8 @@ Je browser kan het audiobestand niet afspelen.
 
 ## Overzicht
 
-De gitaar start samen met de blokfluit nadat de dwarsfluit 1 keer haar melodie gespeeld heeft.
-Hierna speelt de gitaar haar melodie dan 3 keer en dan 2 keer niet.
-Ten slotte speelt de blokfluit de melodie samen met alle andere partijen.
+De gitaar start samen met de blokfluit nadat de dwarsfluit 1 keer de melodie (8 maten) gespeeld heeft.
+Hierna speelt de gitaar de melodie 3 keer, gevolgd door 2 x 8 maten rust.
+Ten slotte speelt de gitaar de melodie samen met alle andere partijen (8 maten).
 
 ![Overzicht dwarsfluit, blokfluit, harp en gitaar](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit-blokfluit-harp-gitaar.svg)

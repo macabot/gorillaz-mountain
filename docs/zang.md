@@ -7,6 +7,7 @@ date = 2026-08-04
 +++
 
 Hier vind je de melodie (8 maten) van de zang.
+Je kunt dit ook een octaaf lager (of hoger) zingen.
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-zang.mp3" type="audio/mpeg">
@@ -32,6 +33,6 @@ Je browser kan het audiobestand niet afspelen.
 
 ## Overzicht
 
-De zang start nadat de melodie 4 keer gespeeld is. Daarna speelt de zang 3 keer haar melodie tot het einde van het arrangement.
+De zang start na 4 x 8 maten melodie en duurt 3 x 8 maten.
 
 ![Overzicht dwarsfluit en zang](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit-zang.svg)

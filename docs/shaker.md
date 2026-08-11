@@ -32,7 +32,7 @@ Je browser kan het audiobestand niet afspelen.
 
 ## Overzicht
 
-De shaker start nadat de melodie 2 keer gespeeld is. Daarna speelt de shaker haar ritme 3,5 keer, gevolgd door 4 maten rust.
-Ten slotte speelt de shaker haar ritme samen met alle andere partijen.
+De shaker start nadat de melodie van de dwarsfluit 2 keer gespeeld is. Daarna speelt de shaker het ritme 3,5 keer, gevolgd door 4 maten rust.
+Ten slotte speelt de shaker het ritme samen met alle andere partijen (8 maten).
 
 ![Overzicht dwarsfluit, trommel, shaker en harp](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-dwarsfluit-trommel-shaker-harp.svg)
