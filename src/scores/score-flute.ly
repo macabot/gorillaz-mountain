@@ -8,6 +8,7 @@ flutePart = \relative c' {
   \bar "|."
 }
 
+% LAYOUT
 \score {
   \new Staff \with {
     \fluteStaffSettings
@@ -16,6 +17,17 @@ flutePart = \relative c' {
   }
   \layout {
     \context { \Score \remove "Bar_number_engraver" }
+  }
+}
+
+% MIDI
+\score {
+  \unfoldRepeats {
+    \new Staff \with {
+      \fluteStaffSettings
+    } {
+      \context Voice = "flute" { << \global \flutePart >> }
+    }
   }
   \midi { }
 }
