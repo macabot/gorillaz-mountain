@@ -84,7 +84,7 @@ endef
 .PHONY: all pdfs svgs mp3s clean dirs
 
 # Default Target
-all: dirs pdfs svgs mp3s
+all: dirs prune pdfs svgs mp3s
 
 pdfs: $(TARGET_PDFS)
 svgs: $(TARGET_SVGS)
@@ -95,6 +95,16 @@ dirs: | $(BUILD_DIR) $(DIST_PDF_DIR) $(DIST_SVG_DIR) $(DIST_MP3_DIR)
 
 $(BUILD_DIR) $(DIST_PDF_DIR) $(DIST_SVG_DIR) $(DIST_MP3_DIR):
 	@mkdir -p $@
+
+# Remove stale files in dist/ that are no longer targets
+prune:
+	@echo "=== Checking for stale files in dist/ ==="
+	@for file in $$(find $(DIST_DIR) -type f 2>/dev/null); do \
+		if ! echo "$(TARGET_PDFS) $(TARGET_SVGS) $(TARGET_MP3S)" | grep -q "$$file"; then \
+			echo "Removing stale cached file: $$file"; \
+			rm -f "$$file"; \
+		fi \
+	done
 
 .SECONDEXPANSION:
 
