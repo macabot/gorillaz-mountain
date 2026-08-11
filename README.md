@@ -10,8 +10,6 @@ Sources:
 ## Requirements
 
 - [LilyPond](https://lilypond.org/)
-- [Docker](https://www.docker.com/)
-- [Timbre of Heaver SoundFont](https://www.midkar.com/SoundFonts/index.html)
 
 ### Optional
 
@@ -23,10 +21,7 @@ Sources:
 Run
 
 ```shell
-lilypond gorillaz-mountain.ly
+make
 ```
 
-This creates:
-
-- gorillaz-mountain.midi
-- gorillaz-mountain.pdf
+This creates PDFs, SVGs and MP3s inside the `dist` directory.

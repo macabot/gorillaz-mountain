@@ -111,6 +111,7 @@ $(DIST_SVG_DIR)/$(PREFIX)-%.svg: $(SCORES_DIR)/score-$$(call get_eng,%).ly $$(ca
 	@mv $(BUILD_DIR)/$(PREFIX)-$*.cropped.svg $@
 
 # Direct download link for Timbres of Heaven
+# See https://www.midkar.com/SoundFonts/index.html
 SF2_URL := https://www.midkar.com/SoundFonts/Timbres%20of%20Heaven%20(XGM)%204.00(G).7z
 
 # Download and unpack .7z SoundFont if missing
@@ -132,10 +133,12 @@ $(DIST_MP3_DIR)/%.mp3: $(BUILD_DIR)/%.midi $(SOUNDFONT) | $(BUILD_DIR) $(DIST_MP
 	ffmpeg -y -i $(BUILD_DIR)/$*_temp.wav -b:a 192k $@
 	@rm -f $(BUILD_DIR)/$*_temp.wav
 
-# Compile Mermaid Diagrams to SVG via Docker
+# Compile Mermaid Diagrams to SVG via Kroki API
 $(DIST_SVG_DIR)/$(PREFIX)-%.svg: $(SRC_DIR)/diagrams/$$(call get_eng,%).mmd | $(DIST_SVG_DIR)
-	@echo "=== Compiling Mermaid Diagram (via Docker): $< ==="
-	docker run --rm -u $(shell id -u):$(shell id -g) -v $(CURDIR):/data minlag/mermaid-cli -i /data/$< -o /data/$@ -b transparent
+	@echo "=== Compiling Mermaid Diagram (via Kroki API): $< ==="
+	curl -s -X POST https://kroki.io/mermaid/svg \
+		-H "Content-Type: text/plain" \
+		--data-binary "@$<" -o "$@"
 
 clean:
 	rm -rf $(BUILD_DIR) $(DIST_DIR)
