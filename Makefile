@@ -12,8 +12,12 @@ DIST_MP3_DIR := $(DIST_DIR)/mp3
 # Output Naming Prefix
 PREFIX := macabot-gorillaz-mountain
 
-# SoundFont Location
-SOUNDFONT ?= $(HOME)/TimbresOfHeaven/TimbresOfHeaven4.00.sf2
+# Default cache location for downloaded SoundFonts
+SF2_CACHE_DIR := $(HOME)/.cache/soundfonts
+DEFAULT_SF2 := $(SF2_CACHE_DIR)/TimbresOfHeaven4.00.sf2
+
+# Allow override via environment variable or command line
+SOUNDFONT ?= $(DEFAULT_SF2)
 
 # Translation Mapping (Single Words)
 DUTCH_flute       := dwarsfluit
@@ -106,8 +110,23 @@ $(DIST_SVG_DIR)/$(PREFIX)-%.svg: $(SCORES_DIR)/score-$$(call get_eng,%).ly $$(ca
 	lilypond -dbackend=svg -dcrop -o $(BUILD_DIR)/$(PREFIX)-$* $<
 	@mv $(BUILD_DIR)/$(PREFIX)-$*.cropped.svg $@
 
+# Direct download link for Timbres of Heaven
+SF2_URL := https://www.midkar.com/SoundFonts/Timbres%20of%20Heaven%20(XGM)%204.00(G).7z
+
+# Download and unpack .7z SoundFont if missing
+$(SOUNDFONT):
+	@mkdir -p $(dir $@)
+	@echo "=== SoundFont not found at $@. Downloading .7z archive... ==="
+	curl -L -o "$@.7z" "$(SF2_URL)"
+	@echo "=== Extracting SoundFont... ==="
+	@mkdir -p "$(dir $@)temp_sf2"
+	7z x "$@.7z" -o"$(dir $@)temp_sf2" -y
+	@mv $(dir $@)temp_sf2/*.sf2 "$@"
+	@rm -rf "$@.7z" "$(dir $@)temp_sf2"
+	@echo "=== SoundFont successfully extracted to $@ ==="
+
 # Synthesize MP3 from MIDI
-$(DIST_MP3_DIR)/%.mp3: $(BUILD_DIR)/%.midi | $(BUILD_DIR) $(DIST_MP3_DIR)
+$(DIST_MP3_DIR)/%.mp3: $(BUILD_DIR)/%.midi $(SOUNDFONT) | $(BUILD_DIR) $(DIST_MP3_DIR)
 	@echo "=== Synthesizing MP3: $@ ==="
 	fluidsynth -ni $(SOUNDFONT) $< -F $(BUILD_DIR)/$*_temp.wav -r 44100
 	ffmpeg -y -i $(BUILD_DIR)/$*_temp.wav -b:a 192k $@
