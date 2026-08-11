@@ -17,9 +17,11 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Blokfluit arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-blokfluit.svg)
 
-## Blokfluit onder begeleiding
+Bekijk ook het [volledige arrangement](../arrangement).
 
-De blokfluit wordt begeleid, eerst door de dwarsfluit en daarna door de harp.
+## Samenspel
+
+De blokfluit vormt de tegenstem, eerst van de dwarsfluit en daarna van de harp.
 
 ### Dwarsfluit en blokfluit
 

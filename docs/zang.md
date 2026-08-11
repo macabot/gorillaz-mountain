@@ -18,9 +18,11 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Zang arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-zang.svg)
 
-## Zang onder begeleiding
+Bekijk ook het [volledige arrangement](../arrangement).
 
-De zang wordt begeleid door de dwarsfluit.
+## Samenspel
+
+De zang begeleidt de dwarsfluit.
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-dwarsfluit-zang.mp3" type="audio/mpeg">

@@ -17,9 +17,11 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Piano arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-piano.svg)
 
-## Piano onder begeleiding
+Bekijk ook het [volledige arrangement](../arrangement).
 
-De piano wordt begeleid, eerst door de harp en daarna door de dwarsfluit.
+## Samenspel
+
+De piano speelt een hoge bovenstem boven de melodie van de harp en dwarsfluit.
 
 ### Harp en piano
 

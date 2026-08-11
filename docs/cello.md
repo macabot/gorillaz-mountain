@@ -17,11 +17,13 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Cello arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-cello.svg)
 
-## Cello onder begeleiding
+Bekijk ook het [volledige arrangement](../arrangement).
 
-De cello wordt begeleid door de dwarsfluit en harp. Het vormt samen met de viool de harmonie van het arrangement.
+## Samenspel
 
-## Dwarsfluit en cello
+De cello begeleidt de dwarsfluit en harp en vormt samen met de viool de harmonie van het arrangement.
+
+### Dwarsfluit en cello
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-dwarsfluit-cello.mp3" type="audio/mpeg">
@@ -32,7 +34,7 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Dwarsfluit en cello arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-dwarsfluit-cello.svg)
 
-## Viool en cello
+### Viool en cello
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-viool-cello.mp3" type="audio/mpeg">
@@ -43,7 +45,7 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Viool en cello arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-viool-cello.svg)
 
-## Harp, viool en cello
+### Harp, viool en cello
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-harp-viool-cello.mp3" type="audio/mpeg">

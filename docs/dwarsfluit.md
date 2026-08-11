@@ -18,6 +18,8 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Dwarsfluit arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-dwarsfluit.svg)
 
+Bekijk ook het [volledige arrangement](../arrangement).
+
 ## Overzicht
 
 De dwarsfluit speelt 2 keer de melodie (eerste keer speel je `1.`, tweede keer speel je `2.`), gevolgd door 2 x 8 maten rust.

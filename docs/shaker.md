@@ -17,9 +17,11 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Shaker arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-shaker.svg)
 
-## Shaker onder begeleiding
+Bekijk ook het [volledige arrangement](../arrangement).
 
-### Dwarsfluit, trommel en shaker
+## Samenspel
+
+De trommel en shaker verzorgen de ritmische begeleiding van de dwarsfluit en harp.
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-dwarsfluit-trommel-shaker.mp3" type="audio/mpeg">

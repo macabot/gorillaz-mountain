@@ -17,9 +17,11 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Gitaar arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-gitaar.svg)
 
-## Gitaar onder begeleiding
+Bekijk ook het [volledige arrangement](../arrangement).
 
-De gitaar wordt begeleid, eerst door de dwarsfluit en daarna door de harp.
+## Samenspel
+
+De gitaar begeleidt eerst de dwarsfluit en daarna door de harp.
 
 ### Dwarsfluit en gitaar
 

@@ -17,11 +17,13 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Viool arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-viool.svg)
 
-## Viool onder begeleiding
+Bekijk ook het [volledige arrangement](../arrangement).
 
-De viool wordt begeleid door de harp. Het vormt samen met de cello de harmonie van het arrangement.
+## Samenspel
 
-## Viool en cello
+De viool en cello begeleiden de harp en vormen samen de harmonie van het arrangement.
+
+### Viool en cello
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-viool-cello.mp3" type="audio/mpeg">
@@ -32,7 +34,7 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Viool en cello arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-viool-cello.svg)
 
-## Harp, viool en cello
+### Harp, viool en cello
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-harp-viool-cello.mp3" type="audio/mpeg">

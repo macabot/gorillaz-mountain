@@ -20,6 +20,8 @@ Je browser kan het audiobestand niet afspelen.
 
 ![Harp arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-harp.svg)
 
+Bekijk ook het [volledige arrangement](../arrangement).
+
 ## Overzicht
 
 De harp start nadat de melodie 1,5 keer gespeeld is. Let op: de harp start dus op maat 5 van de melodie van de dwarsfluit. De harp speelt 2,5 keer de melodie, gevolgd door 2 x 8 maten rust.
