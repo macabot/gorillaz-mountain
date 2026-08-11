@@ -5,7 +5,6 @@
 
 flutePart = \relative c' {
   \flutePickup
-  \fluteRepeatMelody
   \fluteOutroMelody
   \bar "|."
 }
@@ -13,7 +12,7 @@ flutePart = \relative c' {
 voicePart = {
   \clef "treble_8"
   \partial 4 r4
-  \repeat unfold 2 { \voiceMelody }
+  \voiceMelody
 }
 
 \score {

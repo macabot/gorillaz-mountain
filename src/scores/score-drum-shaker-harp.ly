@@ -1,14 +1,8 @@
 \version "2.24.3"
 \include "../global.ly"
-\include "../parts/flute.ly"
 \include "../parts/drum.ly"
 \include "../parts/shaker.ly"
-
-flutePart = \relative c' {
-  \flutePickup
-  \fluteOutroMelody
-  \bar "|."
-}
+\include "../parts/harp.ly"
 
 drumPart = {
   \partial 4 r4
@@ -22,14 +16,14 @@ shakerPart = {
   \bar "|."
 }
 
+harpPart = \relative c' {
+  \harpPickup
+  \harpOutroMelody
+  \bar "|."
+}
+
 \score {
   <<
-    \new Staff \with {
-      \fluteStaffSettings
-    } {
-      \context Voice = "flute" { << \global \flutePart >> }
-    }
-
     \new DrumStaff \with {
       \drumStaffSettings
     } {
@@ -40,6 +34,12 @@ shakerPart = {
       \shakerStaffSettings
     } {
       \context DrumVoice = "shaker" { << \global \shakerPart >> }
+    }
+
+    \new Staff \with {
+      \harpStaffSettings
+    } {
+      \context Voice = "harp" { << \global \harpPart >> }
     }
   >>
   \layout { }

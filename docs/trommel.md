@@ -6,7 +6,7 @@ date = 2026-08-04
   render = 'always'
 +++
 
-Hier vind je het ritme (8 maten) van de trommel. Er zijn 2 trommels. De noten gemarkeerd met `>` worden op de trommel met de hoge klank gespeeld. Alle andere noten op de trommel met de lage klank.
+Hier vind je het ritme (8 maten) van de trommel. Er zijn 2 trommels. De noten gemarkeerd met `>` worden op de trommel met de lage klank gespeeld. Alle andere noten op de trommel met de hoge klank.
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-trommel.mp3" type="audio/mpeg">
@@ -24,13 +24,13 @@ Bekijk ook het [volledige arrangement](../arrangement).
 De trommel en shaker verzorgen de ritmische begeleiding van de dwarsfluit en harp.
 
 <audio controls>
-  <source src="../dist/mp3/macabot-gorillaz-mountain-dwarsfluit-trommel-shaker.mp3" type="audio/mpeg">
+  <source src="../dist/mp3/macabot-gorillaz-mountain-trommel-shaker-harp.mp3" type="audio/mpeg">
 Je browser kan het audiobestand niet afspelen.
 </audio>
 
-[Download als PDF](../dist/pdf/macabot-gorillaz-mountain-dwarsfluit-trommel-shaker.pdf)
+[Download als PDF](../dist/pdf/macabot-gorillaz-mountain-trommel-shaker-harp.pdf)
 
-![Dwarsfluit, trommel en shaker arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-dwarsfluit-trommel-shaker.svg)
+![Trommel, shaker en harp arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-trommel-shaker-harp.svg)
 
 ## Overzicht
 

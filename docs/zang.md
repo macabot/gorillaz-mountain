@@ -8,6 +8,8 @@ date = 2026-08-04
 
 Hier vind je de melodie (8 maten) van de zang.
 Je kunt dit ook een octaaf lager (of hoger) zingen.
+De geluidsopname zingt om technische redenen elke noot als "ooh".
+De bedoeling is echter om "aah" te zingen.
 
 <audio controls>
   <source src="../dist/mp3/macabot-gorillaz-mountain-zang.mp3" type="audio/mpeg">

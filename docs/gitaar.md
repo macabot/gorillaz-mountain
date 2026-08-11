@@ -30,7 +30,7 @@ De gitaar begeleidt eerst de dwarsfluit en daarna door de harp.
 Je browser kan het audiobestand niet afspelen.
 </audio>
 
-[Download als PDF](../dist/pdf/macabot-gorillaz-mountain-dwarsfluit-dwarsfluit-gitaar.pdf)
+[Download als PDF](../dist/pdf/macabot-gorillaz-mountain-dwarsfluit-gitaar.pdf)
 
 ![Dwarsfluit en gitaar arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-dwarsfluit-gitaar.svg)
 
@@ -41,7 +41,7 @@ Je browser kan het audiobestand niet afspelen.
 Je browser kan het audiobestand niet afspelen.
 </audio>
 
-[Download als PDF](../dist/pdf/macabot-gorillaz-mountain-dwarsfluit-harp-gitaar.pdf)
+[Download als PDF](../dist/pdf/macabot-gorillaz-mountain-harp-gitaar.pdf)
 
 ![Harp en gitaar arrangement Gorillaz - The Mountain](../dist/svg/macabot-gorillaz-mountain-harp-gitaar.svg)
 
