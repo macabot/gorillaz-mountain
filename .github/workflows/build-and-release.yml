@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+# Grant GITHUB_TOKEN write access to contents (required for Releases)
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
