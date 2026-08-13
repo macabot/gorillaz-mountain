@@ -10,6 +10,10 @@ Sources:
 ## Requirements
 
 - [LilyPond](https://lilypond.org/)
+- [fluidsynth](https://www.fluidsynth.org/)
+- [ffmpeg](https://www.ffmpeg.org/)
+- [curl](https://curl.se/)
+- [7-zip](https://www.7-zip.org/)
 
 ### Optional
 
