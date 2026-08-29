@@ -128,7 +128,7 @@ SF2_URL := https://www.midkar.com/SoundFonts/Timbres%20of%20Heaven%20(XGM)%204.0
 $(SOUNDFONT):
 	@mkdir -p $(dir $@)
 	@echo "=== SoundFont not found at $@. Downloading .7z archive... ==="
-	curl -L -o "$@.7z" "$(SF2_URL)"
+	curl -sfSL -o "$@.7z" "$(SF2_URL)"
 	@echo "=== Extracting SoundFont... ==="
 	@mkdir -p "$(dir $@)temp_sf2"
 	7z x "$@.7z" -o"$(dir $@)temp_sf2" -y
