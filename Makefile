@@ -143,10 +143,10 @@ $(DIST_MP3_DIR)/%.mp3: $(BUILD_DIR)/%.midi $(SOUNDFONT) | $(BUILD_DIR) $(DIST_MP
 	ffmpeg -y -i $(BUILD_DIR)/$*_temp.wav -b:a 192k $@
 	@rm -f $(BUILD_DIR)/$*_temp.wav
 
-# Compile Mermaid Diagrams to SVG via Mermaid Ink API
+# Compile Mermaid Diagrams to SVG via Official Docker Container
 $(DIST_SVG_DIR)/$(PREFIX)-%.svg: $(SRC_DIR)/diagrams/$$(call get_eng,%).mmd | $(DIST_SVG_DIR)
-	@echo "=== Compiling Mermaid Diagram (via Mermaid Ink API): $< ==="
-	curl -s "https://mermaid.ink/svg/$$(python3 -c "import base64; print(base64.b64encode(open('$<', 'rb').read()).decode('utf-8'))")" -o "$@"
+	@echo "=== Compiling Mermaid Diagram via Docker: $< ==="
+	docker run --rm -u $$(id -u):$$(id -g) -v "$$(pwd):/data" ghcr.io/mermaid-js/mermaid-cli/mermaid-cli -i "/data/$<" -o "/data/$@" -b transparent
 
 clean:
 	rm -rf $(BUILD_DIR) $(DIST_DIR)
