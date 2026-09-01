@@ -20,13 +20,15 @@ jobs:
       - name: Restore Git file timestamps
         uses: chetan/git-restore-mtime-action@v2
 
-      - name: Cache dist directory
+      - name: Cache build and dist directories
         uses: actions/cache@v4
         with:
-          path: dist
-          key: dist-cache-${{ github.sha }}
+          path: |
+            build
+            dist
+          key: build-dist-cache-${{ github.sha }}
           restore-keys: |
-            dist-cache-
+            build-dist-cache-
 
       - name: Cache SoundFont
         uses: actions/cache@v4
