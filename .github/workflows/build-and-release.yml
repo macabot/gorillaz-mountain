@@ -31,7 +31,9 @@ jobs:
         run: make all
 
       - name: Zip dist directory
-        run: zip -r dist.zip dist/
+        run: |
+          cd dist
+          zip -r ../dist.zip .
 
       # Release the asset on GitHub
       - name: Upload Release Asset
