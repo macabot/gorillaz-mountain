@@ -11,7 +11,7 @@ Iedereen hoeft slechts 8 maten te leren. Deze 8 maten worden op verschillende mo
 
 Ik heb een arrangement geschreven van [The Mountain door Gorillaz](https://youtu.be/a2IdAW2A1ug?si=ESMKC07APd6FcPqz) voor de dwarsfluit, blokfluit, harp, piano, trommel, shaker, gitaar, viool, cello en zang. Dus iedereen kan meedoen. Hieronder is een overzicht van hoe de 8 maten per instrument zich herhalen en overlappen met elkaar:
 
-![Overzicht arrangement](/muziek/gorillaz-mountain/dist/svg/macabot-gorillaz-mountain-overview-arrangement.svg)
+![Overzicht arrangement](svg/macabot-gorillaz-mountain-overview-arrangement.svg)
 
 Hier zien we dat de dwarsfluit, trommel en cello samen beginnen. Vervolgens springen de blokfluit en gitaar bij. Daarna de harp, enzovoort.
 
