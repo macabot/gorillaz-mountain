@@ -128,7 +128,7 @@ SF2_URL := https://www.midkar.com/SoundFonts/Timbres%20of%20Heaven%20(XGM)%204.0
 $(SOUNDFONT):
 	@mkdir -p $(dir $@)
 	@echo "=== SoundFont not found at $@. Downloading .7z archive... ==="
-	curl -L -o "$@.7z" "$(SF2_URL)"
+	curl -sfSL -o "$@.7z" "$(SF2_URL)"
 	@echo "=== Extracting SoundFont... ==="
 	@mkdir -p "$(dir $@)temp_sf2"
 	7z x "$@.7z" -o"$(dir $@)temp_sf2" -y
@@ -143,10 +143,10 @@ $(DIST_MP3_DIR)/%.mp3: $(BUILD_DIR)/%.midi $(SOUNDFONT) | $(BUILD_DIR) $(DIST_MP
 	ffmpeg -y -i $(BUILD_DIR)/$*_temp.wav -b:a 192k $@
 	@rm -f $(BUILD_DIR)/$*_temp.wav
 
-# Compile Mermaid Diagrams to SVG via Mermaid Ink API
+# Compile Mermaid Diagrams to SVG via Official Docker Container
 $(DIST_SVG_DIR)/$(PREFIX)-%.svg: $(SRC_DIR)/diagrams/$$(call get_eng,%).mmd | $(DIST_SVG_DIR)
-	@echo "=== Compiling Mermaid Diagram (via Mermaid Ink API): $< ==="
-	curl -s "https://mermaid.ink/svg/$$(python3 -c "import base64; print(base64.b64encode(open('$<', 'rb').read()).decode('utf-8'))")" -o "$@"
+	@echo "=== Compiling Mermaid Diagram via Docker: $< ==="
+	docker run --rm -u $$(id -u):$$(id -g) -v "$$(pwd):/data" ghcr.io/mermaid-js/mermaid-cli/mermaid-cli -i "/data/$<" -o "/data/$@" -b transparent
 
 clean:
 	rm -rf $(BUILD_DIR) $(DIST_DIR)
