@@ -111,14 +111,15 @@ prune:
 # Compile PDF & MIDI
 $(DIST_PDF_DIR)/$(PREFIX)-%.pdf $(BUILD_DIR)/$(PREFIX)-%.midi: $(SCORES_DIR)/score-$$(call get_eng,%).ly $$(call get_deps,score-$$(call get_eng,%)) | $(BUILD_DIR) $(DIST_PDF_DIR)
 	@echo "=== Compiling PDF & MIDI: $< ==="
-	lilypond -o $(BUILD_DIR)/$(PREFIX)-$* $<
+	lilypond -dno-point-and-click -o $(BUILD_DIR)/$(PREFIX)-$* $<
 	@mv $(BUILD_DIR)/$(PREFIX)-$*.pdf $(DIST_PDF_DIR)/$(PREFIX)-$*.pdf
 
 # Compile SVG (Single Continuous SVG for Web)
 $(DIST_SVG_DIR)/$(PREFIX)-%.svg: $(SCORES_DIR)/score-$$(call get_eng,%).ly $$(call get_deps,score-$$(call get_eng,%)) | $(BUILD_DIR) $(DIST_SVG_DIR)
 	@echo "=== Compiling SVG: $< ==="
-	lilypond -dbackend=svg -dcrop -o $(BUILD_DIR)/$(PREFIX)-$* $<
-	@mv $(BUILD_DIR)/$(PREFIX)-$*.cropped.svg $@
+	printf '\\version "2.24.3"\n\\include "%s"\n\\paper { page-breaking = #ly:one-page-breaking }\n' "$<" | \
+		lilypond -dbackend=svg -dno-point-and-click -o $(BUILD_DIR)/$(PREFIX)-$* -
+	@mv $(BUILD_DIR)/$(PREFIX)-$*.svg $@
 
 # Direct download link for Timbres of Heaven
 # See https://www.midkar.com/SoundFonts/index.html
