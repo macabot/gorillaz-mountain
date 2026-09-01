@@ -46,6 +46,7 @@ jobs:
 
       # Notify the blog repository to rebuild
       - name: Trigger Blog Deploy Workflow
+        if: vars.DISABLE_BLOG_DISPATCH != 'true'
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.BLOG_DISPATCH_TOKEN }}
