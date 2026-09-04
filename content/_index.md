@@ -1,6 +1,7 @@
 +++
 title = 'Gorillaz - The Mountain'
 date = 2026-08-04
+layout = 'single'
 +++
 
 Hoi allemaal,

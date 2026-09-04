@@ -1,6 +1,5 @@
 +++
 title = 'Harp'
-date = 2026-08-04
 [build]
   list = 'never'
   render = 'always'
