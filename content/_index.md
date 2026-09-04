@@ -1,6 +1,6 @@
 +++
 title = 'Gorillaz - The Mountain'
-date = 2026-08-04T00:00:00Z
+date = 2026-08-04
 +++
 
 Hoi allemaal,
